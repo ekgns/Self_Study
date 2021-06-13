@@ -13,6 +13,7 @@
 		ABB5556926764DF400F7C18C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB5556726764DF400F7C18C /* Main.storyboard */; };
 		ABB5556B26764DF500F7C18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB5556A26764DF500F7C18C /* Assets.xcassets */; };
 		ABB5556E26764DF500F7C18C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB5556C26764DF500F7C18C /* LaunchScreen.storyboard */; };
+		ABB55576267658BC00F7C18C /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB55575267658BC00F7C18C /* DemoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ABB5556A26764DF500F7C18C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABB5556D26764DF500F7C18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABB5556F26764DF500F7C18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB55575267658BC00F7C18C /* DemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				ABB5556126764DF400F7C18C /* AppDelegate.swift */,
 				ABB5556326764DF400F7C18C /* SceneDelegate.swift */,
 				ABB5556526764DF400F7C18C /* ViewController.swift */,
+				ABB55575267658BC00F7C18C /* DemoCell.swift */,
 				ABB5556726764DF400F7C18C /* Main.storyboard */,
 				ABB5556A26764DF500F7C18C /* Assets.xcassets */,
 				ABB5556C26764DF500F7C18C /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				ABB5556626764DF400F7C18C /* ViewController.swift in Sources */,
 				ABB5556226764DF400F7C18C /* AppDelegate.swift in Sources */,
+				ABB55576267658BC00F7C18C /* DemoCell.swift in Sources */,
 				ABB5556426764DF400F7C18C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
