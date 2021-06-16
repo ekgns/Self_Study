@@ -14,6 +14,10 @@
     
     
 ### 실패물 
+![Simulator Screen Shot - iPhone 11 - 2021-06-16 at 22 59 27](https://user-images.githubusercontent.com/70513066/122235721-e12d8480-cef8-11eb-9515-267de54bb8e9.png)
+![Simulator Screen Shot - iPhone 11 - 2021-06-16 at 23 00 43](https://user-images.githubusercontent.com/70513066/122235680-d96de000-cef8-11eb-9561-0c6974310a32.png)
+![Simulator Screen Shot - iPhone 11 - 2021-06-16 at 22 57 04](https://user-images.githubusercontent.com/70513066/122236002-1a65f480-cef9-11eb-9ea4-7cb639a785d7.png)
+
 
 ### 결과물
 
