@@ -11,14 +11,14 @@
     다시 시뮬레이터를 런을 해보니  호리젠탈과 버티컬 센터에 맞춰놨는데 출력이 되지 않았고 높이를 추가해주니 
     출력은 되었지만 원하는대로 나오지 않았다 크키를 잘 정해주고 앵커를 탑과 리딩을 잡아주었더니 해결은 되었다
     
-    
+    3. -- 재시도 flowlayout은 필요없었다 그냐 셀안으 ui의 레이아웃을 잘 조절하면 해결 되는 문제 였다
     
 ### 실패물 
-![Simulator Screen Shot - iPhone 11 - 2021-06-16 at 22 59 27](https://user-images.githubusercontent.com/70513066/122235721-e12d8480-cef8-11eb-9515-267de54bb8e9.png)
-![Simulator Screen Shot - iPhone 11 - 2021-06-16 at 23 00 43](https://user-images.githubusercontent.com/70513066/122235680-d96de000-cef8-11eb-9561-0c6974310a32.png)
-![Simulator Screen Shot - iPhone 11 - 2021-06-16 at 22 57 04](https://user-images.githubusercontent.com/70513066/122236002-1a65f480-cef9-11eb-9ea4-7cb639a785d7.png)
+<img src="https://user-images.githubusercontent.com/70513066/122235721-e12d8480-cef8-11eb-9515-267de54bb8e9.png" width="40%">
+<img src="https://user-images.githubusercontent.com/70513066/122235680-d96de000-cef8-11eb-9561-0c6974310a32.png" width="40%">
+<img src="https://user-images.githubusercontent.com/70513066/122236002-1a65f480-cef9-11eb-9ea4-7cb639a785d7.png" width="40%">
 
 
 ### 결과물
-
+<img src="https://user-images.githubusercontent.com/70513066/122405722-3f22a080-cfbb-11eb-83fc-0d3f1aaeff10.png" width="40%">
 
