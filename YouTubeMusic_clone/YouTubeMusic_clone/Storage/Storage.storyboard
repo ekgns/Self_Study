@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--StorageVC-->
+        <scene sceneID="nZl-5j-Bxc">
+            <objects>
+                <viewController storyboardIdentifier="StorageVC" id="zdg-3b-3pc" customClass="StorageVC" customModule="YouTubeMusic_clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y2L-zQ-E8N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5h4-sy-Zv3">
+                                <rect key="frame" x="0.0" y="102" width="414" height="711"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StorageListCell" id="lIg-cc-yGP" customClass="StorageListCell" customModule="YouTubeMusic_clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lIg-cc-yGP" id="QPO-sN-XYQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eck-rW-qhR">
+                                                    <rect key="frame" x="20" y="0.0" width="205" height="36"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <state key="normal" title=" 오프라인 저장 콘텐츠" image="Download">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsG-e5-cn7">
+                                                    <rect key="frame" x="391.5" y="11" width="12.5" height="22"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" image="chevron.right" catalog="system"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Eck-rW-qhR" firstAttribute="leading" secondItem="QPO-sN-XYQ" secondAttribute="leading" constant="20" symbolic="YES" id="Ouk-Hb-VB3"/>
+                                                <constraint firstItem="rsG-e5-cn7" firstAttribute="centerY" secondItem="QPO-sN-XYQ" secondAttribute="centerY" id="tqv-Cj-6bW"/>
+                                                <constraint firstItem="Eck-rW-qhR" firstAttribute="top" secondItem="QPO-sN-XYQ" secondAttribute="top" id="xmo-Vl-4E9"/>
+                                                <constraint firstAttribute="trailing" secondItem="rsG-e5-cn7" secondAttribute="trailing" constant="10" id="yTN-uh-gnS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentBtn" destination="Eck-rW-qhR" id="sn3-Oc-T5G"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zdg-3b-3pc" id="ebQ-GP-NYd"/>
+                                    <outlet property="delegate" destination="zdg-3b-3pc" id="hwJ-je-H6S"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nnb-Vf-sAA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="NyC-Lm-xVQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="122" id="yA4-ll-Iot"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="NyC-Lm-xVQ" secondAttribute="bottom" id="YRV-hZ-Crj"/>
+                                    <constraint firstItem="NyC-Lm-xVQ" firstAttribute="top" secondItem="Nnb-Vf-sAA" secondAttribute="top" id="ZuO-mn-4JE"/>
+                                    <constraint firstAttribute="height" constant="50" id="aMh-ge-9cK"/>
+                                    <constraint firstItem="NyC-Lm-xVQ" firstAttribute="leading" secondItem="Nnb-Vf-sAA" secondAttribute="leading" id="qSQ-l9-Pzo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zr6-L2-1n8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zr6-L2-1n8" firstAttribute="bottom" secondItem="5h4-sy-Zv3" secondAttribute="bottom" id="CG6-YI-tbH"/>
+                            <constraint firstItem="Nnb-Vf-sAA" firstAttribute="trailing" secondItem="Zr6-L2-1n8" secondAttribute="trailing" id="IBH-Dc-uju"/>
+                            <constraint firstItem="5h4-sy-Zv3" firstAttribute="leading" secondItem="Zr6-L2-1n8" secondAttribute="leading" id="IPp-ey-Cu2"/>
+                            <constraint firstItem="Zr6-L2-1n8" firstAttribute="trailing" secondItem="5h4-sy-Zv3" secondAttribute="trailing" id="Psg-NW-Yw6"/>
+                            <constraint firstItem="5h4-sy-Zv3" firstAttribute="top" secondItem="Nnb-Vf-sAA" secondAttribute="bottom" constant="8" symbolic="YES" id="SGE-e0-qTT"/>
+                            <constraint firstItem="Nnb-Vf-sAA" firstAttribute="top" secondItem="Zr6-L2-1n8" secondAttribute="top" id="qot-1Q-s0H"/>
+                            <constraint firstItem="Nnb-Vf-sAA" firstAttribute="leading" secondItem="Zr6-L2-1n8" secondAttribute="leading" id="vs7-VX-mqJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="Storage" selectedImage="SStorage" id="RmD-qW-rql"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwd-vZ-kFx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207.24637681159422" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Download" width="36" height="36"/>
+        <image name="Logo" width="30.333333969116211" height="15.333333015441895"/>
+        <image name="SStorage" width="45" height="46"/>
+        <image name="Storage" width="45" height="46"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
