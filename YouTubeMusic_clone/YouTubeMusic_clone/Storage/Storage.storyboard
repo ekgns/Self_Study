@@ -21,29 +21,30 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StorageListCell" id="lIg-cc-yGP" customClass="StorageListCell" customModule="YouTubeMusic_clone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lIg-cc-yGP" id="QPO-sN-XYQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eck-rW-qhR">
-                                                    <rect key="frame" x="20" y="0.0" width="205" height="36"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <rect key="frame" x="20" y="10" width="222" height="36"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <state key="normal" title=" 오프라인 저장 콘텐츠" image="Download">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsG-e5-cn7">
-                                                    <rect key="frame" x="391.5" y="11" width="12.5" height="22"/>
+                                                    <rect key="frame" x="391.5" y="17" width="12.5" height="22"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" image="chevron.right" catalog="system"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Eck-rW-qhR" secondAttribute="bottom" constant="10" id="6Da-e4-KPn"/>
                                                 <constraint firstItem="Eck-rW-qhR" firstAttribute="leading" secondItem="QPO-sN-XYQ" secondAttribute="leading" constant="20" symbolic="YES" id="Ouk-Hb-VB3"/>
+                                                <constraint firstItem="Eck-rW-qhR" firstAttribute="top" secondItem="QPO-sN-XYQ" secondAttribute="top" constant="10" id="Y3m-Ng-C3a"/>
                                                 <constraint firstItem="rsG-e5-cn7" firstAttribute="centerY" secondItem="QPO-sN-XYQ" secondAttribute="centerY" id="tqv-Cj-6bW"/>
-                                                <constraint firstItem="Eck-rW-qhR" firstAttribute="top" secondItem="QPO-sN-XYQ" secondAttribute="top" id="xmo-Vl-4E9"/>
                                                 <constraint firstAttribute="trailing" secondItem="rsG-e5-cn7" secondAttribute="trailing" constant="10" id="yTN-uh-gnS"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -66,13 +67,50 @@
                                             <constraint firstAttribute="width" constant="122" id="yA4-ll-Iot"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40g-Vr-RVw">
+                                        <rect key="frame" x="356" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="70S-Va-S99"/>
+                                            <constraint firstAttribute="height" constant="50" id="gEp-fg-8wA"/>
+                                        </constraints>
+                                        <state key="normal" image="profile"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuP-k7-DAK">
+                                        <rect key="frame" x="306" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="bhT-FS-tPa"/>
+                                            <constraint firstAttribute="height" constant="50" id="pix-u5-J26"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="magnifyingglass" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="27" weight="medium"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UN-mO-Vid">
+                                        <rect key="frame" x="256" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8RJ-GW-jyL"/>
+                                            <constraint firstAttribute="width" constant="50" id="vyZ-41-AHm"/>
+                                        </constraints>
+                                        <state key="normal" image="AirPlay"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="IuP-k7-DAK" firstAttribute="leading" secondItem="0UN-mO-Vid" secondAttribute="trailing" id="4My-cp-U5b"/>
+                                    <constraint firstAttribute="bottom" secondItem="0UN-mO-Vid" secondAttribute="bottom" id="55k-yl-9fS"/>
+                                    <constraint firstItem="0UN-mO-Vid" firstAttribute="top" secondItem="Nnb-Vf-sAA" secondAttribute="top" id="CLM-Yk-6Rl"/>
+                                    <constraint firstItem="IuP-k7-DAK" firstAttribute="top" secondItem="Nnb-Vf-sAA" secondAttribute="top" id="JOh-uT-Kn3"/>
+                                    <constraint firstItem="40g-Vr-RVw" firstAttribute="leading" secondItem="IuP-k7-DAK" secondAttribute="trailing" id="OWE-nM-fdu"/>
                                     <constraint firstAttribute="bottom" secondItem="NyC-Lm-xVQ" secondAttribute="bottom" id="YRV-hZ-Crj"/>
                                     <constraint firstItem="NyC-Lm-xVQ" firstAttribute="top" secondItem="Nnb-Vf-sAA" secondAttribute="top" id="ZuO-mn-4JE"/>
                                     <constraint firstAttribute="height" constant="50" id="aMh-ge-9cK"/>
+                                    <constraint firstAttribute="trailing" secondItem="40g-Vr-RVw" secondAttribute="trailing" constant="8" id="eZs-SB-t8Z"/>
+                                    <constraint firstItem="40g-Vr-RVw" firstAttribute="top" secondItem="Nnb-Vf-sAA" secondAttribute="top" id="gpx-Wv-1P0"/>
+                                    <constraint firstAttribute="bottom" secondItem="40g-Vr-RVw" secondAttribute="bottom" id="qHZ-lq-Hfp"/>
                                     <constraint firstItem="NyC-Lm-xVQ" firstAttribute="leading" secondItem="Nnb-Vf-sAA" secondAttribute="leading" id="qSQ-l9-Pzo"/>
+                                    <constraint firstAttribute="bottom" secondItem="IuP-k7-DAK" secondAttribute="bottom" id="xP3-ss-Fxa"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -97,11 +135,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AirPlay" width="72" height="72"/>
         <image name="Download" width="36" height="36"/>
         <image name="Logo" width="30.333333969116211" height="15.333333015441895"/>
         <image name="SStorage" width="45" height="46"/>
         <image name="Storage" width="45" height="46"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="profile" width="72" height="72"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

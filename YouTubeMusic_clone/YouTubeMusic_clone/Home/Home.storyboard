@@ -16,18 +16,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home입니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r99-gx-sa8">
-                                <rect key="frame" x="162" y="437.5" width="90" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BF2-AV-hjh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ipd-xc-fmd">
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="122" id="ytH-rJ-mVe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="274-3I-6ZJ">
+                                        <rect key="frame" x="356" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GsQ-og-NTm"/>
+                                            <constraint firstAttribute="width" constant="50" id="aw5-7v-Mab"/>
+                                        </constraints>
+                                        <state key="normal" image="profile"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0F-Oz-bUM">
+                                        <rect key="frame" x="306" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3ZN-4Q-64b"/>
+                                            <constraint firstAttribute="width" constant="50" id="L3B-uZ-ctP"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="magnifyingglass" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="27" weight="medium"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jn-Cu-MFi">
+                                        <rect key="frame" x="256" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="AgV-K5-bHf"/>
+                                            <constraint firstAttribute="width" constant="50" id="V8y-U3-jUv"/>
+                                        </constraints>
+                                        <state key="normal" image="AirPlay"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="h0F-Oz-bUM" secondAttribute="bottom" id="5fX-z1-M2Z"/>
+                                    <constraint firstItem="h0F-Oz-bUM" firstAttribute="leading" secondItem="9Jn-Cu-MFi" secondAttribute="trailing" id="5nC-7K-gyN"/>
+                                    <constraint firstAttribute="height" constant="50" id="Id1-sr-jyS"/>
+                                    <constraint firstItem="ipd-xc-fmd" firstAttribute="leading" secondItem="BF2-AV-hjh" secondAttribute="leading" id="Nx2-QH-YqQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ipd-xc-fmd" secondAttribute="bottom" id="OaT-gg-JMS"/>
+                                    <constraint firstAttribute="bottom" secondItem="274-3I-6ZJ" secondAttribute="bottom" id="Rci-Yj-uGg"/>
+                                    <constraint firstItem="ipd-xc-fmd" firstAttribute="top" secondItem="BF2-AV-hjh" secondAttribute="top" id="TGw-Mf-6AH"/>
+                                    <constraint firstItem="274-3I-6ZJ" firstAttribute="top" secondItem="BF2-AV-hjh" secondAttribute="top" id="UKa-Je-rS9"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Jn-Cu-MFi" secondAttribute="bottom" id="VER-zx-ZVP"/>
+                                    <constraint firstItem="9Jn-Cu-MFi" firstAttribute="top" secondItem="BF2-AV-hjh" secondAttribute="top" id="Xer-D6-r9x"/>
+                                    <constraint firstItem="h0F-Oz-bUM" firstAttribute="top" secondItem="BF2-AV-hjh" secondAttribute="top" id="ebe-Fu-L1q"/>
+                                    <constraint firstItem="274-3I-6ZJ" firstAttribute="leading" secondItem="h0F-Oz-bUM" secondAttribute="trailing" id="j01-Hx-lGe"/>
+                                    <constraint firstAttribute="trailing" secondItem="274-3I-6ZJ" secondAttribute="trailing" constant="8" id="jog-Cm-mMo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="r99-gx-sa8" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Pdh-uY-jyS"/>
-                            <constraint firstItem="r99-gx-sa8" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="iZT-oc-RqK"/>
+                            <constraint firstItem="BF2-AV-hjh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="VgJ-OG-MvP"/>
+                            <constraint firstItem="BF2-AV-hjh" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="nLM-Z9-v79"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BF2-AV-hjh" secondAttribute="trailing" id="q3G-tc-3HD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Home" selectedImage="SHome" id="wrJ-Ik-feN"/>
@@ -39,8 +89,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AirPlay" width="72" height="72"/>
         <image name="Home" width="45" height="46"/>
+        <image name="Logo" width="30.333333969116211" height="15.333333015441895"/>
         <image name="SHome" width="45" height="46"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="profile" width="72" height="72"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

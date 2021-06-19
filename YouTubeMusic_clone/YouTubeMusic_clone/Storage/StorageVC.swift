@@ -9,7 +9,7 @@ import UIKit
 
 class StorageVC: UIViewController {
 
-    let contentImgs = ["download", "Playlists", "Album", "Song","Artist","Subscription"]
+    let contentImgs = ["Download", "Playlists", "Album", "Song","Artist","Subscription"]
     let contentNames = ["오프라인 저장 콘텐츠", "재생목록", "앨범", "노래", "아티스트", "구독"]
     
     override func viewDidLoad() {
@@ -26,6 +26,7 @@ extension StorageVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StorageListCell", for: indexPath) as! StorageListCell
+        cell.contentBtn.setImage(UIImage(named: "\(contentImgs[indexPath.row]).png"), for: .normal)
         cell.contentBtn.setTitle(contentNames[indexPath.row], for: .normal)
         return cell
     }
