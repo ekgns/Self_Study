@@ -8,35 +8,37 @@
 import UIKit
 
 class TourVC: UIViewController {
-    let tableContentImgArr = ["new album", "chart", "smail"]
-    let tabbleContentArr = ["새 앨범", "차트", "분위기 및 장르"]
+    let ContentImgArr = ["new album", "chart", "smail"]
+    let ContentArr = [" 새 앨범", " 차트", " 분위기 및 장르"]
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
-class TableviewCells: UITableViewCell {
+class CollectionViewCells: UICollectionViewCell {
     
     @IBOutlet weak var tourContent: UIButton!
     
+    
 }
 
 
-extension TourVC: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tabbleContentArr.count
+extension TourVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return ContentArr.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableviewCells", for: indexPath) as! TableviewCells
-        cell.tourContent.setImage(UIImage(named: "\(tableContentImgArr[indexPath.row]).png"), for: .normal)
-        cell.tourContent.setTitle("\(tabbleContentArr[indexPath.row])", for: .normal)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCells", for: indexPath) as! CollectionViewCells
+        cell.tourContent.setImage(UIImage(named: "\(ContentImgArr[indexPath.row]).png"), for: .normal)
+        cell.tourContent.setTitle("\(ContentArr[indexPath.row])", for: .normal)
         return cell
     }
     
+ 
     
 }
 
-extension TourVC: UITableViewDelegate {
+extension TourVC: UICollectionViewDelegate {
     
 }
