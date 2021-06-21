@@ -32,6 +32,7 @@ extension TourVC: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCells", for: indexPath) as! CollectionViewCells
         cell.tourContent.setImage(UIImage(named: "\(ContentImgArr[indexPath.row]).png"), for: .normal)
         cell.tourContent.setTitle("\(ContentArr[indexPath.row])", for: .normal)
+        print("\(ContentArr[indexPath.row])")
         return cell
     }
     
@@ -41,4 +42,9 @@ extension TourVC: UICollectionViewDataSource {
 
 extension TourVC: UICollectionViewDelegate {
     
+}
+
+extension TourVC: UICollectionViewDelegateFlowLayout {
+ 
+
 }
