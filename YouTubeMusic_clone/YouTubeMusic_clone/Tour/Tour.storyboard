@@ -79,13 +79,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dZV-Xj-RP2">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="Gyl-Os-swc"/>
+                                                    <constraint firstAttribute="height" constant="150" id="Gyl-Os-swc"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rRq-x5-ShS">
-                                                    <size key="itemSize" width="404" height="57"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rRq-x5-ShS">
+                                                    <size key="itemSize" width="404" height="50"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -101,7 +101,7 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVf-o6-FXg">
                                                                     <rect key="frame" x="10" y="0.0" width="222" height="57"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="40" id="o1v-cV-fqk"/>
+                                                                        <constraint firstAttribute="height" constant="10" id="o1v-cV-fqk"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                                     <state key="normal" title=" 오프라인 저장 콘텐츠" image="button:aVf-o6-FXg:image">
@@ -134,12 +134,30 @@
                                                     <outlet property="delegate" destination="CUD-eu-ZCI" id="bz7-Df-eIq"/>
                                                 </connections>
                                             </collectionView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Og0-N6-SaH">
+                                                <rect key="frame" x="0.0" y="160" width="414" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Stf-os-AmK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="As8-0T-5jH">
+                                                <rect key="frame" x="0.0" y="161" width="414" height="639"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </tableView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="800" id="3T2-IY-bxG"/>
+                                            <constraint firstAttribute="trailing" secondItem="Og0-N6-SaH" secondAttribute="trailing" id="6fP-DC-1Aa"/>
                                             <constraint firstItem="dZV-Xj-RP2" firstAttribute="top" secondItem="h96-ly-B2j" secondAttribute="top" id="7uK-hz-pSO"/>
+                                            <constraint firstAttribute="trailing" secondItem="As8-0T-5jH" secondAttribute="trailing" id="9Hj-bk-Quo"/>
                                             <constraint firstItem="dZV-Xj-RP2" firstAttribute="leading" secondItem="h96-ly-B2j" secondAttribute="leading" id="dQE-S7-brt"/>
+                                            <constraint firstItem="Og0-N6-SaH" firstAttribute="leading" secondItem="h96-ly-B2j" secondAttribute="leading" id="fam-3G-GLy"/>
+                                            <constraint firstItem="As8-0T-5jH" firstAttribute="top" secondItem="Og0-N6-SaH" secondAttribute="bottom" id="fba-I0-2kK"/>
+                                            <constraint firstItem="Og0-N6-SaH" firstAttribute="top" secondItem="dZV-Xj-RP2" secondAttribute="bottom" constant="10" id="g8Z-Vh-tgL"/>
+                                            <constraint firstItem="As8-0T-5jH" firstAttribute="leading" secondItem="h96-ly-B2j" secondAttribute="leading" id="lpl-6T-C1e"/>
+                                            <constraint firstAttribute="bottom" secondItem="As8-0T-5jH" secondAttribute="bottom" id="pt8-ZA-1gd"/>
                                             <constraint firstAttribute="trailing" secondItem="dZV-Xj-RP2" secondAttribute="trailing" id="ycx-la-1N5"/>
                                         </constraints>
                                     </view>
