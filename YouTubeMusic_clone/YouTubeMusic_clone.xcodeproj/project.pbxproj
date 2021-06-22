@@ -18,6 +18,10 @@
 		AB01929A267C409100CF7482 /* Tour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB019299267C409100CF7482 /* Tour.storyboard */; };
 		AB01929C267C40C100CF7482 /* Storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB01929B267C40C100CF7482 /* Storage.storyboard */; };
 		AB01929E267C40D100CF7482 /* StorageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB01929D267C40D100CF7482 /* StorageVC.swift */; };
+		AB0726612681BBD50061E8EE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07265F2681BBD50061E8EE /* TableViewCell.swift */; };
+		AB0726622681BBD50061E8EE /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0726602681BBD50061E8EE /* TableViewCell.xib */; };
+		AB0726672681C23E0061E8EE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0726652681C23E0061E8EE /* CollectionViewCell.swift */; };
+		AB0726682681C23E0061E8EE /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0726662681C23E0061E8EE /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		AB019299267C409100CF7482 /* Tour.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tour.storyboard; sourceTree = "<group>"; };
 		AB01929B267C40C100CF7482 /* Storage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storage.storyboard; sourceTree = "<group>"; };
 		AB01929D267C40D100CF7482 /* StorageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageVC.swift; sourceTree = "<group>"; };
+		AB07265F2681BBD50061E8EE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		AB0726602681BBD50061E8EE /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		AB0726652681C23E0061E8EE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		AB0726662681C23E0061E8EE /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,7 @@
 		AB019295267C405300CF7482 /* Tour */ = {
 			isa = PBXGroup;
 			children = (
+				AB07265E2681BBAF0061E8EE /* Cells */,
 				AB019297267C408800CF7482 /* TourVC.swift */,
 				AB019299267C409100CF7482 /* Tour.storyboard */,
 			);
@@ -104,6 +113,25 @@
 				AB01929D267C40D100CF7482 /* StorageVC.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		AB07265E2681BBAF0061E8EE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AB0726632681C08D0061E8EE /* Collection_Cells */,
+				AB07265F2681BBD50061E8EE /* TableViewCell.swift */,
+				AB0726602681BBD50061E8EE /* TableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AB0726632681C08D0061E8EE /* Collection_Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AB0726652681C23E0061E8EE /* CollectionViewCell.swift */,
+				AB0726662681C23E0061E8EE /* CollectionViewCell.xib */,
+			);
+			path = Collection_Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,9 +193,11 @@
 			files = (
 				AB01929A267C409100CF7482 /* Tour.storyboard in Resources */,
 				AB019289267C3CE100CF7482 /* LaunchScreen.storyboard in Resources */,
+				AB0726622681BBD50061E8EE /* TableViewCell.xib in Resources */,
 				AB01929C267C40C100CF7482 /* Storage.storyboard in Resources */,
 				AB019286267C3CE100CF7482 /* Assets.xcassets in Resources */,
 				AB019284267C3CE000CF7482 /* Main.storyboard in Resources */,
+				AB0726682681C23E0061E8EE /* CollectionViewCell.xib in Resources */,
 				AB019291267C3D6200CF7482 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +212,8 @@
 				AB01929E267C40D100CF7482 /* StorageVC.swift in Sources */,
 				AB019294267C3D9000CF7482 /* HomeVC.swift in Sources */,
 				AB01927D267C3CE000CF7482 /* AppDelegate.swift in Sources */,
+				AB0726672681C23E0061E8EE /* CollectionViewCell.swift in Sources */,
+				AB0726612681BBD50061E8EE /* TableViewCell.swift in Sources */,
 				AB019298267C408800CF7482 /* TourVC.swift in Sources */,
 				AB01927F267C3CE000CF7482 /* SceneDelegate.swift in Sources */,
 			);

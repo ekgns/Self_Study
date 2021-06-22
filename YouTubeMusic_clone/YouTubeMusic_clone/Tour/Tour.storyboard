@@ -142,7 +142,7 @@
                                                 </constraints>
                                             </imageView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="As8-0T-5jH">
-                                                <rect key="frame" x="0.0" y="161" width="414" height="639"/>
+                                                <rect key="frame" x="0.0" y="171" width="414" height="629"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </tableView>
                                         </subviews>
@@ -154,7 +154,7 @@
                                             <constraint firstAttribute="trailing" secondItem="As8-0T-5jH" secondAttribute="trailing" id="9Hj-bk-Quo"/>
                                             <constraint firstItem="dZV-Xj-RP2" firstAttribute="leading" secondItem="h96-ly-B2j" secondAttribute="leading" id="dQE-S7-brt"/>
                                             <constraint firstItem="Og0-N6-SaH" firstAttribute="leading" secondItem="h96-ly-B2j" secondAttribute="leading" id="fam-3G-GLy"/>
-                                            <constraint firstItem="As8-0T-5jH" firstAttribute="top" secondItem="Og0-N6-SaH" secondAttribute="bottom" id="fba-I0-2kK"/>
+                                            <constraint firstItem="As8-0T-5jH" firstAttribute="top" secondItem="Og0-N6-SaH" secondAttribute="bottom" constant="10" id="fba-I0-2kK"/>
                                             <constraint firstItem="Og0-N6-SaH" firstAttribute="top" secondItem="dZV-Xj-RP2" secondAttribute="bottom" constant="10" id="g8Z-Vh-tgL"/>
                                             <constraint firstItem="As8-0T-5jH" firstAttribute="leading" secondItem="h96-ly-B2j" secondAttribute="leading" id="lpl-6T-C1e"/>
                                             <constraint firstAttribute="bottom" secondItem="As8-0T-5jH" secondAttribute="bottom" id="pt8-ZA-1gd"/>
@@ -187,6 +187,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Tour" selectedImage="STour" id="1Nw-SA-wyd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tourTableView" destination="As8-0T-5jH" id="JE4-Z5-eGR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7f-on-oeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

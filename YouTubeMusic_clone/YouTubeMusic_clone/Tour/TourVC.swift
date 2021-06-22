@@ -8,10 +8,18 @@
 import UIKit
 
 class TourVC: UIViewController {
+    @IBOutlet weak var tourTableView: UITableView!
+    
     let ContentImgArr = ["new album", "chart", "smail"]
     let ContentArr = [" 새 앨범", " 차트", " 분위기 및 장르"]
+    let categoryContent = ["새 앨범 및 싱글", "인기곡", "분위기 및 장르", "인기", "새 뮤직 비디오"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tourTableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
+        tourTableView.dataSource = self
+        tourTableView.delegate = self
     }
 }
 
@@ -47,4 +55,23 @@ extension TourVC: UICollectionViewDelegate {
 extension TourVC: UICollectionViewDelegateFlowLayout {
  
 
+}
+
+extension TourVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categoryContent.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tourTableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as! TableViewCell
+        cell.categoryLabel.text = categoryContent[indexPath.row]
+        return cell
+    }
+    
+    
+}
+
+extension TourVC: UITableViewDelegate {
+    
 }
