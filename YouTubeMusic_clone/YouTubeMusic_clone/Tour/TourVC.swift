@@ -17,9 +17,7 @@ class TourVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tourTableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
-        tourTableView.dataSource = self
-        tourTableView.delegate = self
+
     }
 }
 
@@ -40,7 +38,7 @@ extension TourVC: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCells", for: indexPath) as! CollectionViewCells
         cell.tourContent.setImage(UIImage(named: "\(ContentImgArr[indexPath.row]).png"), for: .normal)
         cell.tourContent.setTitle("\(ContentArr[indexPath.row])", for: .normal)
-        print("\(ContentArr[indexPath.row])")
+        
         return cell
     }
     
@@ -57,21 +55,3 @@ extension TourVC: UICollectionViewDelegateFlowLayout {
 
 }
 
-extension TourVC: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categoryContent.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tourTableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as! TableViewCell
-        cell.categoryLabel.text = categoryContent[indexPath.row]
-        return cell
-    }
-    
-    
-}
-
-extension TourVC: UITableViewDelegate {
-    
-}
