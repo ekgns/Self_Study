@@ -21,6 +21,9 @@
 		AB0726612681BBD50061E8EE /* NewAlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB07265F2681BBD50061E8EE /* NewAlbumVC.swift */; };
 		AB0726672681C23E0061E8EE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0726652681C23E0061E8EE /* CollectionViewCell.swift */; };
 		AB0726682681C23E0061E8EE /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0726662681C23E0061E8EE /* CollectionViewCell.xib */; };
+		AB3CEACA2684592100A65806 /* CollectionViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CEAC82684592100A65806 /* CollectionViewCell3.swift */; };
+		AB3CEACB2684592100A65806 /* CollectionViewCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB3CEAC92684592100A65806 /* CollectionViewCell3.xib */; };
+		AB3CEAD12684596D00A65806 /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CEAD02684596D00A65806 /* MoodVC.swift */; };
 		ABA928B02682FDEF0000EEC8 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA928AE2682FDEF0000EEC8 /* CollectionViewCell2.swift */; };
 		ABA928B12682FDEF0000EEC8 /* CollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA928AF2682FDEF0000EEC8 /* CollectionViewCell2.xib */; };
 		ABA928B3268325A10000EEC8 /* HItSongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA928B2268325A10000EEC8 /* HItSongVC.swift */; };
@@ -43,6 +46,9 @@
 		AB07265F2681BBD50061E8EE /* NewAlbumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlbumVC.swift; sourceTree = "<group>"; };
 		AB0726652681C23E0061E8EE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		AB0726662681C23E0061E8EE /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		AB3CEAC82684592100A65806 /* CollectionViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell3.swift; sourceTree = "<group>"; };
+		AB3CEAC92684592100A65806 /* CollectionViewCell3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell3.xib; sourceTree = "<group>"; };
+		AB3CEAD02684596D00A65806 /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
 		ABA928AE2682FDEF0000EEC8 /* CollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell2.swift; sourceTree = "<group>"; };
 		ABA928AF2682FDEF0000EEC8 /* CollectionViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell2.xib; sourceTree = "<group>"; };
 		ABA928B2268325A10000EEC8 /* HItSongVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HItSongVC.swift; sourceTree = "<group>"; };
@@ -130,10 +136,21 @@
 		AB0726632681C08D0061E8EE /* Collection_Cells */ = {
 			isa = PBXGroup;
 			children = (
+				AB3CEAC72684591400A65806 /* 3 */,
 				ABA928AD2682FDDB0000EEC8 /* 2 */,
 				ABA928AC2682FDCF0000EEC8 /* 1 */,
 			);
 			path = Collection_Cells;
+			sourceTree = "<group>";
+		};
+		AB3CEAC72684591400A65806 /* 3 */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CEAC82684592100A65806 /* CollectionViewCell3.swift */,
+				AB3CEAC92684592100A65806 /* CollectionViewCell3.xib */,
+				AB3CEAD02684596D00A65806 /* MoodVC.swift */,
+			);
+			path = 3;
 			sourceTree = "<group>";
 		};
 		ABA928AC2682FDCF0000EEC8 /* 1 */ = {
@@ -218,6 +235,7 @@
 				AB01929C267C40C100CF7482 /* Storage.storyboard in Resources */,
 				AB019286267C3CE100CF7482 /* Assets.xcassets in Resources */,
 				AB019284267C3CE000CF7482 /* Main.storyboard in Resources */,
+				AB3CEACB2684592100A65806 /* CollectionViewCell3.xib in Resources */,
 				AB0726682681C23E0061E8EE /* CollectionViewCell.xib in Resources */,
 				AB019291267C3D6200CF7482 /* Home.storyboard in Resources */,
 				ABA928B12682FDEF0000EEC8 /* CollectionViewCell2.xib in Resources */,
@@ -235,6 +253,8 @@
 				AB01929E267C40D100CF7482 /* StorageVC.swift in Sources */,
 				AB019294267C3D9000CF7482 /* HomeVC.swift in Sources */,
 				AB01927D267C3CE000CF7482 /* AppDelegate.swift in Sources */,
+				AB3CEAD12684596D00A65806 /* MoodVC.swift in Sources */,
+				AB3CEACA2684592100A65806 /* CollectionViewCell3.swift in Sources */,
 				AB0726672681C23E0061E8EE /* CollectionViewCell.swift in Sources */,
 				AB0726612681BBD50061E8EE /* NewAlbumVC.swift in Sources */,
 				ABA928B02682FDEF0000EEC8 /* CollectionViewCell2.swift in Sources */,
