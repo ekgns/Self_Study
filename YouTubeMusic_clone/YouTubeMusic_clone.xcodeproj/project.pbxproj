@@ -27,6 +27,7 @@
 		ABA928B02682FDEF0000EEC8 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA928AE2682FDEF0000EEC8 /* CollectionViewCell2.swift */; };
 		ABA928B12682FDEF0000EEC8 /* CollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA928AF2682FDEF0000EEC8 /* CollectionViewCell2.xib */; };
 		ABA928B3268325A10000EEC8 /* HItSongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA928B2268325A10000EEC8 /* HItSongVC.swift */; };
+		ABBEC7F52685AF31006DBF54 /* HitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBEC7F42685AF31006DBF54 /* HitVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		ABA928AE2682FDEF0000EEC8 /* CollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell2.swift; sourceTree = "<group>"; };
 		ABA928AF2682FDEF0000EEC8 /* CollectionViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell2.xib; sourceTree = "<group>"; };
 		ABA928B2268325A10000EEC8 /* HItSongVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HItSongVC.swift; sourceTree = "<group>"; };
+		ABBEC7F42685AF31006DBF54 /* HitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		AB0726632681C08D0061E8EE /* Collection_Cells */ = {
 			isa = PBXGroup;
 			children = (
+				ABBEC7F32685AF1D006DBF54 /* 4 */,
 				AB3CEAC72684591400A65806 /* 3 */,
 				ABA928AD2682FDDB0000EEC8 /* 2 */,
 				ABA928AC2682FDCF0000EEC8 /* 1 */,
@@ -171,6 +174,14 @@
 				ABA928B2268325A10000EEC8 /* HItSongVC.swift */,
 			);
 			path = 2;
+			sourceTree = "<group>";
+		};
+		ABBEC7F32685AF1D006DBF54 /* 4 */ = {
+			isa = PBXGroup;
+			children = (
+				ABBEC7F42685AF31006DBF54 /* HitVC.swift */,
+			);
+			path = 4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 				AB3CEACA2684592100A65806 /* CollectionViewCell3.swift in Sources */,
 				AB0726672681C23E0061E8EE /* CollectionViewCell.swift in Sources */,
 				AB0726612681BBD50061E8EE /* NewAlbumVC.swift in Sources */,
+				ABBEC7F52685AF31006DBF54 /* HitVC.swift in Sources */,
 				ABA928B02682FDEF0000EEC8 /* CollectionViewCell2.swift in Sources */,
 				AB019298267C408800CF7482 /* TourVC.swift in Sources */,
 				AB01927F267C3CE000CF7482 /* SceneDelegate.swift in Sources */,
