@@ -10,6 +10,7 @@ import UIKit
 class HItSongVC: UIViewController {
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

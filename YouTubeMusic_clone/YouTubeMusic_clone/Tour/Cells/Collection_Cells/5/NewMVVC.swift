@@ -8,22 +8,36 @@
 import UIKit
 
 class NewMVVC: UIViewController {
-
+    @IBOutlet  weak var category: UILabel!
+    @IBOutlet  weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        category.text = "새 뮤직 비디오"
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(CollectionViewCell5.nib(), forCellWithReuseIdentifier: CollectionViewCell5.identifier)
+        
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension NewMVVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 24
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell5.identifier, for: indexPath) as! CollectionViewCell5
+        cell.newMVImg.layer.cornerRadius = 5
+        cell.newMVImg.backgroundColor = .red
+        cell.newMVTitle.text = "블라블라"
+        cell.newMVArtist.text = "누구·조회수 11만화"
+        return cell
     }
-    */
+    
+    
+}
 
+extension NewMVVC: UICollectionViewDelegate {
+    
 }
