@@ -341,15 +341,23 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모두 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQP-K7-nck">
+                                <rect key="frame" x="338" y="32" width="56" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eJg-Ad-zLK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="syd-Fs-1V5" firstAttribute="leading" secondItem="2Nn-IP-enk" secondAttribute="leading" constant="15" id="93n-Nd-Iha"/>
                             <constraint firstItem="dGs-bz-AfA" firstAttribute="top" secondItem="syd-Fs-1V5" secondAttribute="bottom" constant="10" id="JEh-n0-yzC"/>
+                            <constraint firstItem="AQP-K7-nck" firstAttribute="trailing" secondItem="2Nn-IP-enk" secondAttribute="trailingMargin" id="PyV-aF-eDO"/>
                             <constraint firstItem="syd-Fs-1V5" firstAttribute="top" secondItem="2Nn-IP-enk" secondAttribute="top" constant="20" id="T5m-IF-g7R"/>
                             <constraint firstAttribute="bottom" secondItem="dGs-bz-AfA" secondAttribute="bottom" id="UZa-dZ-Jd8"/>
                             <constraint firstAttribute="trailing" secondItem="dGs-bz-AfA" secondAttribute="trailing" id="f2L-ii-SkI"/>
+                            <constraint firstItem="AQP-K7-nck" firstAttribute="bottom" secondItem="syd-Fs-1V5" secondAttribute="bottom" id="fWc-Mf-C8N"/>
                             <constraint firstItem="dGs-bz-AfA" firstAttribute="leading" secondItem="2Nn-IP-enk" secondAttribute="leading" id="kMh-bG-T2P"/>
                         </constraints>
                     </view>
@@ -360,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIG-tc-vLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="-282"/>
+            <point key="canvasLocation" x="334.78260869565219" y="-282.58928571428572"/>
         </scene>
         <!--MoodVC-->
         <scene sceneID="zBO-qY-1Lr">
@@ -396,13 +404,21 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모두 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-HL-kSK">
+                                <rect key="frame" x="338" y="32" width="56" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fz8-RH-4g4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yzz-Ra-AJ6" firstAttribute="top" secondItem="glg-PM-8ey" secondAttribute="top" constant="20" id="02Z-sr-hax"/>
                             <constraint firstAttribute="trailing" secondItem="Ewj-ZL-4bY" secondAttribute="trailing" id="CUl-bt-dRc"/>
+                            <constraint firstItem="A7f-HL-kSK" firstAttribute="bottom" secondItem="yzz-Ra-AJ6" secondAttribute="bottom" id="JMh-f1-raF"/>
                             <constraint firstItem="yzz-Ra-AJ6" firstAttribute="leading" secondItem="glg-PM-8ey" secondAttribute="leading" constant="15" id="Klx-wy-AN0"/>
+                            <constraint firstAttribute="trailing" secondItem="A7f-HL-kSK" secondAttribute="trailing" constant="20" symbolic="YES" id="QVQ-Ye-3zx"/>
                             <constraint firstItem="Ewj-ZL-4bY" firstAttribute="leading" secondItem="glg-PM-8ey" secondAttribute="leading" id="Vmm-tx-VB2"/>
                             <constraint firstItem="Ewj-ZL-4bY" firstAttribute="top" secondItem="yzz-Ra-AJ6" secondAttribute="bottom" constant="10" id="iX2-6h-kNS"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Ewj-ZL-4bY" secondAttribute="bottom" id="wiN-qh-N1N"/>
@@ -451,10 +467,18 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모두 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfk-pG-JJl">
+                                <rect key="frame" x="338" y="32" width="56" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uj1-IS-XXc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Xfk-pG-JJl" firstAttribute="bottom" secondItem="oiU-4u-YR7" secondAttribute="bottom" id="00S-Ic-eHN"/>
+                            <constraint firstItem="uj1-IS-XXc" firstAttribute="trailing" secondItem="Xfk-pG-JJl" secondAttribute="trailing" constant="20" id="1aY-7F-Wi0"/>
                             <constraint firstAttribute="bottom" secondItem="KYf-2F-81N" secondAttribute="bottom" id="4k2-jp-hmE"/>
                             <constraint firstAttribute="trailing" secondItem="KYf-2F-81N" secondAttribute="trailing" id="DX9-6n-hEj"/>
                             <constraint firstItem="oiU-4u-YR7" firstAttribute="top" secondItem="RqJ-mo-9xE" secondAttribute="top" constant="20" id="XcG-mt-oq3"/>
@@ -506,6 +530,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모두 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CL-ey-10n">
+                                <rect key="frame" x="338" y="27" width="56" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aG8-9M-d7R"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -515,6 +545,8 @@
                             <constraint firstItem="Pg4-ty-9O3" firstAttribute="leading" secondItem="UOM-Tk-LCF" secondAttribute="leading" constant="20" id="EDr-7k-4fC"/>
                             <constraint firstItem="neG-30-ZWK" firstAttribute="leading" secondItem="UOM-Tk-LCF" secondAttribute="leadingMargin" id="Gcb-Ec-Tr2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="neG-30-ZWK" secondAttribute="trailing" id="HF7-c4-IWQ"/>
+                            <constraint firstAttribute="trailing" secondItem="7CL-ey-10n" secondAttribute="trailing" constant="20" symbolic="YES" id="PPs-xr-DdD"/>
+                            <constraint firstItem="7CL-ey-10n" firstAttribute="bottom" secondItem="Pg4-ty-9O3" secondAttribute="bottom" id="YKH-Lm-vxK"/>
                             <constraint firstAttribute="bottomMargin" secondItem="neG-30-ZWK" secondAttribute="bottom" id="a9R-pC-hU9"/>
                         </constraints>
                     </view>
