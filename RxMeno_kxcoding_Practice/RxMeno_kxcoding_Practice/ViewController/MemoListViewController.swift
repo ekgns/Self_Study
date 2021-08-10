@@ -56,6 +56,12 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .bind(to: viewModel.detailAction.inputs) // 전달된 메모를 디테일 액션과 바인딩한다
             .disposed(by: rx.disposeBag) // 선택한 메모가 액션으로 전달 되고 액션에 구현되어있는 코드가 실행된다 
         
+        var backButton = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
+        viewModel.title
+            .drive(backButton.rx.title)
+            .disposed(by: rx.disposeBag)
+        backButton.rx.action = viewModel.popAction
+        navigationItem.backBarButtonItem = backButton
     }
     // 데이터 소스 구현 없이 짧은 코드로 테이블 뷰의 데이터를 표시 할 수 있다
     // 셀을 재사용 큐에서 꺼내고 리턴하는 부분도 자동으로 처리
