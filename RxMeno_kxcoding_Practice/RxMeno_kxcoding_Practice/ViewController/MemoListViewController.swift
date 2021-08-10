@@ -38,8 +38,13 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
                 cell.textLabel?.text = memo.content
             }
             .disposed(by: rx.disposeBag)
-    } // 데이터 소스 구현 없이 짧은 코드로 테이블 뷰의 데이터를 표시 할 수 있다
+        // 플러스 버튼과 액션을 바인딩한다
+        addButton.rx.action = viewModel.makeCreateAction()
+    }
+    // 데이터 소스 구현 없이 짧은 코드로 테이블 뷰의 데이터를 표시 할 수 있다
     // 셀을 재사용 큐에서 꺼내고 리턴하는 부분도 자동으로 처리
     // 클로져에서 셀 구성 코드만 구현 한면 된다 
-
+    
+    
+    
 }

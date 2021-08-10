@@ -21,7 +21,6 @@ class MemoComposeViewController: UIViewController, ViewModelBindableType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
        
     // 가장 중요한 바인딩
@@ -48,6 +47,8 @@ class MemoComposeViewController: UIViewController, ViewModelBindableType {
             
             .bind(to: viewModel.saveAction.inputs) //이어서 방출된 텍스트를 세이브 액션과 바인딩
             .disposed(by: rx.disposeBag)
+        // 코코아에서는 세그웨이가 처리하지만
+        // MVVM은 뷰 모델이 처리한다
     }
     
     // 키보드가 바로 활성화 될 수 있도록 뷰 윌 어피어에 퍼스트 리스펀더로 설정

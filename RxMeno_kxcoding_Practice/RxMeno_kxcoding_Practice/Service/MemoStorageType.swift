@@ -11,7 +11,7 @@ import RxSwift
 
 protocol MemoStorageType {
     @discardableResult
-    func createMeno(content: String) -> Observable<Memo>
+    func createMemo(content: String) -> Observable<Memo>
     
     @discardableResult
     func memoList() -> Observable<[Memo]>
