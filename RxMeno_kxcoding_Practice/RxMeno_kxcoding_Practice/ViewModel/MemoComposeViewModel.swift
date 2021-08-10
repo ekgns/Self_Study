@@ -35,19 +35,21 @@ class MemoComposeViewModel: CommonViewModel {
         // 세이브 액션으로 전달된 액션을 그대로 저장하지않고 액션을 한번더 랩핑했다
         self.saveAction = Action<String, Void> { input in // 액션이 전달 되었다면 실제로 액션을 실행하고 화면을 닫는다
             if let action = saveAction {
+            
                 action.execute(input)
-                print("액션 동작함 =============")
             }
             // 반대로 액션이 전달되지않았다면 화면만 닫히고 끝난다
-            return sceneCoordinator.colse(animated: true).asObservable().map { _ in }
+            print("save 동작==============")
+            return sceneCoordinator.close(animated: true).asObservable().map { _ in }
         }
         
         self.cancelAction = CocoaAction {
             if let action = cancelAction {
-                print("취소 동작함 ==============")
+            
                 action.execute(())
             }
-            return sceneCoordinator.colse(animated: true).asObservable().map { _ in }
+            print("취소 동작함 ==============")
+            return sceneCoordinator.close(animated: true).asObservable().map { _ in }
         }
         super.init(title: title, sceneCoordinator: sceneCoordinator, storage: storage)
     }

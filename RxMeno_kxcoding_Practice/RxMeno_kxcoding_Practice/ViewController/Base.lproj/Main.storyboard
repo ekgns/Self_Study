@@ -85,8 +85,45 @@
                     <view key="view" contentMode="scaleToFill" id="ZNO-13-qQ7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFa-Gz-c08">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="trash" id="wsU-si-ARQ">
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lKu-dm-bDe"/>
+                                    <barButtonItem systemItem="compose" id="LO5-r7-PRk"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="f2A-Bi-hgw"/>
+                                    <barButtonItem systemItem="action" id="R4X-qF-zfU"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CjN-Ct-nx8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qeR-SD-Hy6">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qeR-SD-Hy6" id="lPo-l6-cy6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ln1-ct-G6Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CFa-Gz-c08" firstAttribute="trailing" secondItem="ln1-ct-G6Y" secondAttribute="trailing" id="9EE-e1-ZXG"/>
+                            <constraint firstItem="CFa-Gz-c08" firstAttribute="bottom" secondItem="ln1-ct-G6Y" secondAttribute="bottom" id="JAa-sx-A45"/>
+                            <constraint firstItem="CFa-Gz-c08" firstAttribute="top" secondItem="CjN-Ct-nx8" secondAttribute="bottom" id="Sei-bm-2sw"/>
+                            <constraint firstItem="CjN-Ct-nx8" firstAttribute="top" secondItem="ln1-ct-G6Y" secondAttribute="top" id="ZBn-tK-yGh"/>
+                            <constraint firstItem="ln1-ct-G6Y" firstAttribute="trailing" secondItem="CjN-Ct-nx8" secondAttribute="trailing" id="h3k-Ba-XiT"/>
+                            <constraint firstItem="CjN-Ct-nx8" firstAttribute="leading" secondItem="ln1-ct-G6Y" secondAttribute="leading" id="srq-d9-fcy"/>
+                            <constraint firstItem="CFa-Gz-c08" firstAttribute="leading" secondItem="ln1-ct-G6Y" secondAttribute="leading" id="ytF-bu-Jet"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="메모 보기" id="33e-Vf-tBI"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -179,6 +216,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

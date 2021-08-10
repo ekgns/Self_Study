@@ -11,8 +11,8 @@ import RxCocoa
 
 // 씬 코디네이터 프로토콜을 채용한 실제 씬 코디데이터를 구현
 // 씬 코드네이터 클래스 선언하고 방금 선언한 씬 코드네이터 프로토콜 채용
-
 class SceneCoordinator: SceneCoordinatorType {
+    
     private let bag = DisposeBag() // 리소스 정리에 사용 구독 취소!
     
     // 씬 코디네이터는 화면 전환을 담당하기 때문에 윈도우 인스턴스와 현재 화면에 표시되는 씬을 가지고 있어야 한다
@@ -63,10 +63,10 @@ class SceneCoordinator: SceneCoordinatorType {
     }
     
     @discardableResult
-    func colse(animated: Bool) -> Completable {
+    func close(animated: Bool) -> Completable {
         return Completable.create { [unowned self] completable in
-            if let presentingVC = self.currentVC.presentedViewController {
-                self.currentVC.dismiss(animated: animated) {
+            if let presentingVC = self.currentVC.presentingViewController {
+                self.currentVC.dismiss(animated: animated) { // 뷰 컨트롤러가 모달 방식으로 표시 되어 있다면 현재 씬을 디스미스 한다
                     self.currentVC = presentingVC
                     completable(.completed)
                 }

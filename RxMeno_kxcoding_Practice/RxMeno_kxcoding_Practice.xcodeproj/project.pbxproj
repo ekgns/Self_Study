@@ -106,9 +106,9 @@
 				AB7122C926C0EE4700B16F91 /* Service */,
 				AB7122C626C0EE3C00B16F91 /* Model */,
 				AB7122C826C0EE4400B16F91 /* ViewModel */,
+				AB7122C726C0EE4200B16F91 /* ViewController */,
 				AB7122AF26C0EAC000B16F91 /* AppDelegate.swift */,
 				AB7122B126C0EAC000B16F91 /* SceneDelegate.swift */,
-				AB7122C726C0EE4200B16F91 /* ViewController */,
 				AB7122BB26C0EAC100B16F91 /* Assets.xcassets */,
 				AB7122C026C0EAC100B16F91 /* Info.plist */,
 			);

@@ -15,7 +15,7 @@ protocol SceneCoordinatorType { // 리턴형이 컴플리터블 구독자를 추
     func transition(to scene: Scene, using style: TransitionStyle, animated: Bool) -> Completable // 새로운 씬을 표시 파라메터로 대상 씬과 트렌지션스타일 애니메이션 플레그를 전달
     
     @discardableResult // 현재 씬을 닫고 이전 씬으로 돌아간다
-    func colse(animated: Bool) -> Completable
+    func close(animated: Bool) -> Completable
 }
 
 
