@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38619FF94DCA4A8F8876A4E2 /* Pods_RxMeno_kxcoding_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9D07A8DEE42552B773DB9D /* Pods_RxMeno_kxcoding_Practice.framework */; };
+		AB7122B026C0EAC000B16F91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122AF26C0EAC000B16F91 /* AppDelegate.swift */; };
+		AB7122B226C0EAC000B16F91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122B126C0EAC000B16F91 /* SceneDelegate.swift */; };
+		AB7122B726C0EAC000B16F91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7122B526C0EAC000B16F91 /* Main.storyboard */; };
+		AB7122BA26C0EAC000B16F91 /* RxMeno_kxcoding_Practice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB7122B826C0EAC000B16F91 /* RxMeno_kxcoding_Practice.xcdatamodeld */; };
+		AB7122BC26C0EAC100B16F91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB7122BB26C0EAC100B16F91 /* Assets.xcassets */; };
+		AB7122BF26C0EAC100B16F91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7122BD26C0EAC100B16F91 /* LaunchScreen.storyboard */; };
+		AB7122CE26C0EFE800B16F91 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122CD26C0EFE800B16F91 /* Memo.swift */; };
+		AB7122D026C0F13A00B16F91 /* MemoStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122CF26C0F13A00B16F91 /* MemoStorageType.swift */; };
+		AB7122D426C0F24800B16F91 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122D326C0F24800B16F91 /* MemoryStorage.swift */; };
+		AB7122D626C0FEE900B16F91 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122D526C0FEE900B16F91 /* MemoListViewController.swift */; };
+		AB7122D826C0FF1000B16F91 /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122D726C0FF1000B16F91 /* MemoDetailViewController.swift */; };
+		AB7122DA26C0FF3800B16F91 /* MemoComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122D926C0FF3800B16F91 /* MemoComposeViewController.swift */; };
+		AB7122DE26C0FF9B00B16F91 /* MemoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122DD26C0FF9B00B16F91 /* MemoListViewModel.swift */; };
+		AB7122E026C0FFBA00B16F91 /* MemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122DF26C0FFBA00B16F91 /* MemoDetailViewModel.swift */; };
+		AB7122E226C0FFDC00B16F91 /* MemoComposeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122E126C0FFDC00B16F91 /* MemoComposeViewModel.swift */; };
+		AB7122E426C1002200B16F91 /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122E326C1002200B16F91 /* ViewModelBindableType.swift */; };
+		AB7122E626C101CC00B16F91 /* TransitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122E526C101CC00B16F91 /* TransitionModel.swift */; };
+		AB7122E826C1023400B16F91 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122E726C1023400B16F91 /* Scene.swift */; };
+		AB7122EA26C116F900B16F91 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122E926C116F900B16F91 /* SceneCoordinatorType.swift */; };
+		AB7122EC26C1188800B16F91 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122EB26C1188800B16F91 /* SceneCoordinator.swift */; };
+		AB7122EE26C12BCB00B16F91 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122ED26C12BCB00B16F91 /* CommonViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F9D07A8DEE42552B773DB9D /* Pods_RxMeno_kxcoding_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMeno_kxcoding_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5395D807573E1A86E34C5212 /* Pods-RxMeno_kxcoding_Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMeno_kxcoding_Practice.debug.xcconfig"; path = "Target Support Files/Pods-RxMeno_kxcoding_Practice/Pods-RxMeno_kxcoding_Practice.debug.xcconfig"; sourceTree = "<group>"; };
+		5DA9F8E2F8C8B8ACFDFFEB1D /* Pods-RxMeno_kxcoding_Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMeno_kxcoding_Practice.release.xcconfig"; path = "Target Support Files/Pods-RxMeno_kxcoding_Practice/Pods-RxMeno_kxcoding_Practice.release.xcconfig"; sourceTree = "<group>"; };
+		AB7122AC26C0EAC000B16F91 /* RxMeno_kxcoding_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMeno_kxcoding_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB7122AF26C0EAC000B16F91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB7122B126C0EAC000B16F91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AB7122B626C0EAC000B16F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB7122B926C0EAC000B16F91 /* RxMeno_kxcoding_Practice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RxMeno_kxcoding_Practice.xcdatamodel; sourceTree = "<group>"; };
+		AB7122BB26C0EAC100B16F91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB7122BE26C0EAC100B16F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB7122C026C0EAC100B16F91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB7122CD26C0EFE800B16F91 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		AB7122CF26C0F13A00B16F91 /* MemoStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageType.swift; sourceTree = "<group>"; };
+		AB7122D326C0F24800B16F91 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		AB7122D526C0FEE900B16F91 /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
+		AB7122D726C0FF1000B16F91 /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
+		AB7122D926C0FF3800B16F91 /* MemoComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewController.swift; sourceTree = "<group>"; };
+		AB7122DD26C0FF9B00B16F91 /* MemoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewModel.swift; sourceTree = "<group>"; };
+		AB7122DF26C0FFBA00B16F91 /* MemoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewModel.swift; sourceTree = "<group>"; };
+		AB7122E126C0FFDC00B16F91 /* MemoComposeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewModel.swift; sourceTree = "<group>"; };
+		AB7122E326C1002200B16F91 /* ViewModelBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
+		AB7122E526C101CC00B16F91 /* TransitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionModel.swift; sourceTree = "<group>"; };
+		AB7122E726C1023400B16F91 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		AB7122E926C116F900B16F91 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
+		AB7122EB26C1188800B16F91 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		AB7122ED26C12BCB00B16F91 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB7122A926C0EAC000B16F91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38619FF94DCA4A8F8876A4E2 /* Pods_RxMeno_kxcoding_Practice.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E63AD34E4CBC679B186C74E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5395D807573E1A86E34C5212 /* Pods-RxMeno_kxcoding_Practice.debug.xcconfig */,
+				5DA9F8E2F8C8B8ACFDFFEB1D /* Pods-RxMeno_kxcoding_Practice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB7122A326C0EAC000B16F91 = {
+			isa = PBXGroup;
+			children = (
+				AB7122AE26C0EAC000B16F91 /* RxMeno_kxcoding_Practice */,
+				AB7122AD26C0EAC000B16F91 /* Products */,
+				1E63AD34E4CBC679B186C74E /* Pods */,
+				DBF9F331A90A882D8508BA58 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AB7122AD26C0EAC000B16F91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB7122AC26C0EAC000B16F91 /* RxMeno_kxcoding_Practice.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB7122AE26C0EAC000B16F91 /* RxMeno_kxcoding_Practice */ = {
+			isa = PBXGroup;
+			children = (
+				AB7122CC26C0EE8F00B16F91 /* Scene */,
+				AB7122C926C0EE4700B16F91 /* Service */,
+				AB7122C626C0EE3C00B16F91 /* Model */,
+				AB7122C826C0EE4400B16F91 /* ViewModel */,
+				AB7122AF26C0EAC000B16F91 /* AppDelegate.swift */,
+				AB7122B126C0EAC000B16F91 /* SceneDelegate.swift */,
+				AB7122C726C0EE4200B16F91 /* ViewController */,
+				AB7122BB26C0EAC100B16F91 /* Assets.xcassets */,
+				AB7122C026C0EAC100B16F91 /* Info.plist */,
+			);
+			path = RxMeno_kxcoding_Practice;
+			sourceTree = "<group>";
+		};
+		AB7122C626C0EE3C00B16F91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB7122CD26C0EFE800B16F91 /* Memo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB7122C726C0EE4200B16F91 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB7122B526C0EAC000B16F91 /* Main.storyboard */,
+				AB7122BD26C0EAC100B16F91 /* LaunchScreen.storyboard */,
+				AB7122D526C0FEE900B16F91 /* MemoListViewController.swift */,
+				AB7122D726C0FF1000B16F91 /* MemoDetailViewController.swift */,
+				AB7122D926C0FF3800B16F91 /* MemoComposeViewController.swift */,
+				AB7122E326C1002200B16F91 /* ViewModelBindableType.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AB7122C826C0EE4400B16F91 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AB7122DD26C0FF9B00B16F91 /* MemoListViewModel.swift */,
+				AB7122DF26C0FFBA00B16F91 /* MemoDetailViewModel.swift */,
+				AB7122E126C0FFDC00B16F91 /* MemoComposeViewModel.swift */,
+				AB7122ED26C12BCB00B16F91 /* CommonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AB7122C926C0EE4700B16F91 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AB7122D226C0F21C00B16F91 /* CoreDataStorage */,
+				AB7122D126C0F20E00B16F91 /* MemoStorage */,
+				AB7122CF26C0F13A00B16F91 /* MemoStorageType.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AB7122CC26C0EE8F00B16F91 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				AB7122E526C101CC00B16F91 /* TransitionModel.swift */,
+				AB7122E726C1023400B16F91 /* Scene.swift */,
+				AB7122E926C116F900B16F91 /* SceneCoordinatorType.swift */,
+				AB7122EB26C1188800B16F91 /* SceneCoordinator.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		AB7122D126C0F20E00B16F91 /* MemoStorage */ = {
+			isa = PBXGroup;
+			children = (
+				AB7122D326C0F24800B16F91 /* MemoryStorage.swift */,
+			);
+			path = MemoStorage;
+			sourceTree = "<group>";
+		};
+		AB7122D226C0F21C00B16F91 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				AB7122B826C0EAC000B16F91 /* RxMeno_kxcoding_Practice.xcdatamodeld */,
+			);
+			path = CoreDataStorage;
+			sourceTree = "<group>";
+		};
+		DBF9F331A90A882D8508BA58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F9D07A8DEE42552B773DB9D /* Pods_RxMeno_kxcoding_Practice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB7122AB26C0EAC000B16F91 /* RxMeno_kxcoding_Practice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB7122C326C0EAC100B16F91 /* Build configuration list for PBXNativeTarget "RxMeno_kxcoding_Practice" */;
+			buildPhases = (
+				60BC07CA8DE0A8390A538F76 /* [CP] Check Pods Manifest.lock */,
+				AB7122A826C0EAC000B16F91 /* Sources */,
+				AB7122A926C0EAC000B16F91 /* Frameworks */,
+				AB7122AA26C0EAC000B16F91 /* Resources */,
+				6C8FA400440BA317E43C4306 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxMeno_kxcoding_Practice;
+			productName = RxMeno_kxcoding_Practice;
+			productReference = AB7122AC26C0EAC000B16F91 /* RxMeno_kxcoding_Practice.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB7122A426C0EAC000B16F91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					AB7122AB26C0EAC000B16F91 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = AB7122A726C0EAC000B16F91 /* Build configuration list for PBXProject "RxMeno_kxcoding_Practice" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB7122A326C0EAC000B16F91;
+			productRefGroup = AB7122AD26C0EAC000B16F91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB7122AB26C0EAC000B16F91 /* RxMeno_kxcoding_Practice */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB7122AA26C0EAC000B16F91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB7122BF26C0EAC100B16F91 /* LaunchScreen.storyboard in Resources */,
+				AB7122BC26C0EAC100B16F91 /* Assets.xcassets in Resources */,
+				AB7122B726C0EAC000B16F91 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60BC07CA8DE0A8390A538F76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxMeno_kxcoding_Practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C8FA400440BA317E43C4306 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxMeno_kxcoding_Practice/Pods-RxMeno_kxcoding_Practice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxMeno_kxcoding_Practice/Pods-RxMeno_kxcoding_Practice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxMeno_kxcoding_Practice/Pods-RxMeno_kxcoding_Practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB7122A826C0EAC000B16F91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB7122D426C0F24800B16F91 /* MemoryStorage.swift in Sources */,
+				AB7122E226C0FFDC00B16F91 /* MemoComposeViewModel.swift in Sources */,
+				AB7122EC26C1188800B16F91 /* SceneCoordinator.swift in Sources */,
+				AB7122E826C1023400B16F91 /* Scene.swift in Sources */,
+				AB7122D826C0FF1000B16F91 /* MemoDetailViewController.swift in Sources */,
+				AB7122E426C1002200B16F91 /* ViewModelBindableType.swift in Sources */,
+				AB7122B026C0EAC000B16F91 /* AppDelegate.swift in Sources */,
+				AB7122D026C0F13A00B16F91 /* MemoStorageType.swift in Sources */,
+				AB7122BA26C0EAC000B16F91 /* RxMeno_kxcoding_Practice.xcdatamodeld in Sources */,
+				AB7122B226C0EAC000B16F91 /* SceneDelegate.swift in Sources */,
+				AB7122EA26C116F900B16F91 /* SceneCoordinatorType.swift in Sources */,
+				AB7122DE26C0FF9B00B16F91 /* MemoListViewModel.swift in Sources */,
+				AB7122E026C0FFBA00B16F91 /* MemoDetailViewModel.swift in Sources */,
+				AB7122EE26C12BCB00B16F91 /* CommonViewModel.swift in Sources */,
+				AB7122E626C101CC00B16F91 /* TransitionModel.swift in Sources */,
+				AB7122D626C0FEE900B16F91 /* MemoListViewController.swift in Sources */,
+				AB7122DA26C0FF3800B16F91 /* MemoComposeViewController.swift in Sources */,
+				AB7122CE26C0EFE800B16F91 /* Memo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AB7122B526C0EAC000B16F91 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB7122B626C0EAC000B16F91 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AB7122BD26C0EAC100B16F91 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB7122BE26C0EAC100B16F91 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB7122C126C0EAC100B16F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB7122C226C0EAC100B16F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB7122C426C0EAC100B16F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5395D807573E1A86E34C5212 /* Pods-RxMeno_kxcoding_Practice.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2FBCR3YXYM;
+				INFOPLIST_FILE = RxMeno_kxcoding_Practice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "RXSwift-Exam.RxMeno-kxcoding-Practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB7122C526C0EAC100B16F91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DA9F8E2F8C8B8ACFDFFEB1D /* Pods-RxMeno_kxcoding_Practice.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2FBCR3YXYM;
+				INFOPLIST_FILE = RxMeno_kxcoding_Practice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "RXSwift-Exam.RxMeno-kxcoding-Practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB7122A726C0EAC000B16F91 /* Build configuration list for PBXProject "RxMeno_kxcoding_Practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB7122C126C0EAC100B16F91 /* Debug */,
+				AB7122C226C0EAC100B16F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB7122C326C0EAC100B16F91 /* Build configuration list for PBXNativeTarget "RxMeno_kxcoding_Practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB7122C426C0EAC100B16F91 /* Debug */,
+				AB7122C526C0EAC100B16F91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AB7122B826C0EAC000B16F91 /* RxMeno_kxcoding_Practice.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AB7122B926C0EAC000B16F91 /* RxMeno_kxcoding_Practice.xcdatamodel */,
+			);
+			currentVersion = AB7122B926C0EAC000B16F91 /* RxMeno_kxcoding_Practice.xcdatamodel */;
+			path = RxMeno_kxcoding_Practice.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AB7122A426C0EAC000B16F91 /* Project object */;
+}
