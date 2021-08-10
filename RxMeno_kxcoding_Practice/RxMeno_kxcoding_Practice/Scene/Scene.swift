@@ -36,7 +36,7 @@ extension Scene { // 스토리보드에 있는 씬을 생성하고 (위에 있�
           
         // 상세보기 씬 생성
         case .detail(let viewModel): // 이 씬은 항상 네비게이션에 스택에 푸쉬 되기 때문에 네비게이션 컨트롤러를 고려 할 필요 없다
-        guard var detailVC = storyboard.instantiateViewController(withIdentifier: "ListNav") as? MemoDetailViewController else {
+        guard var detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? MemoDetailViewController else {
             fatalError()
         }
             detailVC.bind(viewModel: viewModel)

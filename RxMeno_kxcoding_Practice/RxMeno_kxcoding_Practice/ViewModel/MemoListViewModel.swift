@@ -53,6 +53,20 @@ class MemoListViewModel: CommonViewModel {
                     
                     
                 }
+            }
         }
-    }
+    // 목록화면에서 보기 화면으로 전환 구현
+    // 다양한 코드를 보기 위해 속성형태로 구현
+    // 클로저 내부에서 셀프에 접근해야하기 때문에 lazy선언
+    lazy var detailAction: Action<Memo, Void> = {
+        return Action { memo in
+            // 뷰 모델 생성 후 씬을 생성한 다음 씬 코디네이터에서 트랜지션 메서드 호출
+            // 목록화면에서 쓰기 화면으로 이동하는 것과 동일한 과정
+            let detailViewModel = MemoDetailViewModel(memo: memo, title: "메모 보기", sceneCoordinator: self.sceneCoordinator, storage: self.storage)
+            
+            let detailScene = Scene.detail(detailViewModel)
+            
+            return self.sceneCoordinator.transition(to: detailScene, using: .push, animated: true).asObservable().map { _ in }
+        }
+    }()
 }
