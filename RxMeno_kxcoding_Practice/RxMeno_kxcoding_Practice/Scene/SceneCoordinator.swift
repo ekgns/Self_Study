@@ -26,20 +26,20 @@ class SceneCoordinator: SceneCoordinatorType {
     }
     
     @discardableResult
-    func transition(to scene: Scene, using style: TransitionStyle, animated: Bool)
+    func transition(to scene: Scene, using style: TransitionStyle, animated: Bool) // 파라메터로 전달 한 씬은 열거형일 뿐
     -> Completable {
         // 전환 결과를 방출한 서브젝트 선언
         let subject = PublishSubject<Void>()
         
         // 씬을 생성해서 상수에 저장
-        let target = scene.instantiate() // 씬 열거형에서 구현
+        let target = scene.instantiate() // 여기서 전달 된 씬을 실제로 생성 
         
         // 트랜지션 스타일에 따라서 실제 전환 처리
         switch style {
-        case .root:
+        case .root: // 트랜지션으로 전달된 스타일이 루트이 이기 때문에 여기가 실행 된다
             currentVC = target
-            window.rootViewController = target
-            subject.onCompleted()
+            window.rootViewController = target // 앞에서 생성된 씬을 루트 뷰 컨트롤러로 지정하고 있다
+            subject.onCompleted() // 목록 화면을 임베드 하고있는 컨트롤러가 화면에 표시 되고있다 
             
         case .push: // 푸쉬는 네비게이션 컨트롤러에 임베드 되있을 때 만 의미가 있다 임베드 여부 확인 후 임베드 되어있지 않다면 에러 이벤트를 전달하고 중지
             guard let nav = currentVC.navigationController else {

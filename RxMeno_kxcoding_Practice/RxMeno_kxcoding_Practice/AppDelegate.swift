@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 뷰 모델을 두 인스턴스를 통해서 메모를 저장하고 화면 전환을 처리한다
         let storage = MemoryStorage() // 메모리 저장소
         let coordinator = SceneCoordinator(window: window!) // 씬 코디네이션
-        let listViewModel = MemoListViewModel(title: "나의 메모", sceneCoordinator: coordinator, storage: storage) // 이들에 대한 의존성은 뷰 모델을생성할때 생성자를 통해서 주입된다 그다음 새로운 씬을 생성하고 연관 값으로 뷰 모델을 저장 이어서 씬 코디네이터에서 트랜지션 메서드를 호출하고 파라메터로 전달 트랜지션 타입을 루트로 전달
-        let listScene = Scene.list(listViewModel)
-        coordinator.transition(to: listScene, using: .root, animated: false)
+        let listViewModel = MemoListViewModel(title: "나의 메모", sceneCoordinator: coordinator, storage: storage) // 의존성은 뷰 모델을생성할때 생성자를 통해서 주입된다
+        let listScene = Scene.list(listViewModel) // 새로운 씬을 생성하고 연관 값으로 뷰 모델을 저장
+        coordinator.transition(to: listScene, using: .root, animated: false) //  씬 코디네이터에서 트랜지션 메서드를 호출하고 파라메터로 전달 트랜지션 타입을 루트로 전달
         
         return true
     }

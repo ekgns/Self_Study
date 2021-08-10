@@ -21,8 +21,8 @@ extension Scene { // 스토리보드에 있는 씬을 생성하고 (위에 있�
         // 메모 목록 씬을 생성한 다음에 뷰 모델을 바인딩해서 리턴
         // 네비게이션 컨트롤러의 indentifier를 다시 말해서 스토리보드 아이딜르 리스트 네비게이션이라고 설정해줬었다 그걸 가져온다
         switch self {
-        case .list(let viewModel):
-            guard let nav = storyboard.instantiateViewController(withIdentifier: "ListNav") as? UINavigationController else {
+        case .list(let viewModel): // 리스트 씬이 실제로 생성 되는 곳
+            guard let nav = storyboard.instantiateViewController(withIdentifier: "ListNav") as? UINavigationController else { // 스토리보드에서 씬을 생성하고
                 fatalError()
             }
             
@@ -30,7 +30,7 @@ extension Scene { // 스토리보드에 있는 씬을 생성하고 (위에 있�
             else {
                 fatalError()
             }
-            
+//            연관값에 저장된 뷰 모델을 바인딩 하고있다
             listVC.bind(viewModel: viewModel)   // 뷰 모델은 네비게이션 컨트롤러에 임베디드되있는 루트뷰 컨트롤러에 바인딩하고 리턴할떈 네비케이션 컨트롤러를 리턴해야한다
             return nav
           
