@@ -9,6 +9,12 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+extension UIViewController { // 실제로 화면에 표시되어 있는 뷰 컨트롤러를 리턴하는 속성을 추가한다
+    var sceneViewController: UIViewController {
+        return self.children.first ?? self // 네비게이션 컨트롤러와 같은 컨테이너 뷰 컨트롤러라면 마지막 차일드를 리턴하고 나머지 경우에는 셀프를 리턴
+    }
+}
+
 // 씬 코디네이터 프로토콜을 채용한 실제 씬 코디데이터를 구현
 // 씬 코드네이터 클래스 선언하고 방금 선언한 씬 코드네이터 프로토콜 채용
 class SceneCoordinator: SceneCoordinatorType {
@@ -37,18 +43,19 @@ class SceneCoordinator: SceneCoordinatorType {
         // 트랜지션 스타일에 따라서 실제 전환 처리
         switch style {
         case .root: // 트랜지션으로 전달된 스타일이 루트이 이기 때문에 여기가 실행 된다
-            currentVC = target
+            currentVC = target.sceneViewController
             window.rootViewController = target // 앞에서 생성된 씬을 루트 뷰 컨트롤러로 지정하고 있다
             subject.onCompleted() // 목록 화면을 임베드 하고있는 컨트롤러가 화면에 표시 되고있다 
             
         case .push: // 푸쉬는 네비게이션 컨트롤러에 임베드 되있을 때 만 의미가 있다 임베드 여부 확인 후 임베드 되어있지 않다면 에러 이벤트를 전달하고 중지
+            print(currentVC)
             guard let nav = currentVC.navigationController else {
                 subject.onError(TransitionError.navigationControllerMissing)
                 break
             }
              
             nav.pushViewController(target, animated: animated)
-            currentVC = target
+            currentVC = target.sceneViewController
             
             subject.onCompleted()
             
@@ -56,7 +63,7 @@ class SceneCoordinator: SceneCoordinatorType {
             currentVC.present(target, animated: animated) {
                 subject.onCompleted()
             }
-            currentVC = target
+            currentVC = target.sceneViewController
         }
         //이그노어엘리먼트 연산자를 호출해서 서브젝트를 리턴하면 커플리터블로 리턴됨
         return subject.ignoreElements()
@@ -67,7 +74,7 @@ class SceneCoordinator: SceneCoordinatorType {
         return Completable.create { [unowned self] completable in
             if let presentingVC = self.currentVC.presentingViewController {
                 self.currentVC.dismiss(animated: animated) { // 뷰 컨트롤러가 모달 방식으로 표시 되어 있다면 현재 씬을 디스미스 한다
-                    self.currentVC = presentingVC
+                    self.currentVC = presentingVC.sceneViewController
                     completable(.completed)
                 }
             }else if let nav = self.currentVC.navigationController {
