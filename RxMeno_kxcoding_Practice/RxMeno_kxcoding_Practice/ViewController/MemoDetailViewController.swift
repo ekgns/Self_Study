@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 
 // 뷰와 뷰모델 바인딩
@@ -14,9 +16,9 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
     var viewModel: MemoDetailViewModel!
     
     @IBOutlet weak var listTableView: UITableView!
-    @IBOutlet weak var deleteButton: UIBarButtonItem!
-    @IBOutlet weak var editButton: UIBarButtonItem!
-    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var deleteButton: UIBarButtonItem! // 메모 삭제
+    @IBOutlet weak var editButton: UIBarButtonItem! // 메모 편집
+    @IBOutlet weak var shareButton: UIBarButtonItem! // 메모 공유
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,5 +57,15 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
 //        backButton.rx.action = viewModel.popAction
 //        navigationItem.hidesBackButton = true
 //        navigationItem.leftBarButtonItem = backButton // 기본으로 제공되는 백 버튼을 대체
+        
+        shareButton.rx.tap
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance) // 0.5초 마다 탭은 한번 씩만 전달 된다
+            .subscribe(onNext: {[weak self] _ in
+                guard let memo = self?.viewModel.memo.content else { return }
+                
+                let vc = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+                self?.present(vc, animated: true, completion: nil)
+            })
+            .disposed(by: rx.disposeBag)
     }
 }
