@@ -48,7 +48,8 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
             }
             .disposed(by: rx.disposeBag)
         
-        editButton.rx.action = viewModel.makeEditAction()
+        deleteButton.rx.action = viewModel.makeDeleteAction() // 삭제 버튼
+        editButton.rx.action = viewModel.makeEditAction() // 수정 버튼
 //        // 뒤로가기 버튼 아이템
 //        var backButton = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
 //        viewModel.title // 뷰모델에 저장되있는 타이틀과 버튼 타이틀을 바인딩 타이틀이 드라이버형태로 제공 되기때문에 생성자로 전달할 수 없어 바인딩
@@ -62,10 +63,14 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance) // 0.5초 마다 탭은 한번 씩만 전달 된다
             .subscribe(onNext: {[weak self] _ in
                 guard let memo = self?.viewModel.memo.content else { return }
-                
+
                 let vc = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
                 self?.present(vc, animated: true, completion: nil)
             })
             .disposed(by: rx.disposeBag)
+        
+        
     }
+    
+    
 }

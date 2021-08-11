@@ -56,6 +56,12 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .bind(to: viewModel.detailAction.inputs) // 전달된 메모를 디테일 액션과 바인딩한다
             .disposed(by: rx.disposeBag) // 선택한 메모가 액션으로 전달 되고 액션에 구현되어있는 코드가 실행된다 
         
+        // 테이블 뷰에서 스와이프 투 딜리트 모드를 활성화 하고 삭제버튼과 액션을 바인딩해야한다
+        listTableView.rx.modelDeleted(Memo.self)
+            // 컨트롤 이벤트를 리턴 컨트롤 이벤트는 메모를 삭제할때마다 Next 이벤트를 방출
+        // 컨트롤 이벤트를 딜리트 액션과 바인딩한다
+            .bind(to: viewModel.deleteAction.inputs)
+            .disposed(by: rx.disposeBag) // 삭제와 관련된 컨트롤 이벤트를 구독하면 스와이프 투 딜리트가 자동 활성화 
         
     }
     // 데이터 소스 구현 없이 짧은 코드로 테이블 뷰의 데이터를 표시 할 수 있다

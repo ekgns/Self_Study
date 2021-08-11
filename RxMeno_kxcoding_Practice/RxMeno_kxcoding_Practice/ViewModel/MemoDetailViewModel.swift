@@ -57,7 +57,7 @@ class MemoDetailViewModel: CommonViewModel {
         }
     }
     
-    // 메모 수정
+    // MARK: - 메모 수정
     func makeEditAction() -> CocoaAction {
         return CocoaAction { _ in
             let composeViewModel = MemoComposeViewModel(title: "메모편집", content: self.memo.content, sceneCoordinator: self.sceneCoordinator, storage: self.storage, saveAction: self.preformUpdate(memo: self.memo))
@@ -67,5 +67,17 @@ class MemoDetailViewModel: CommonViewModel {
             return self.sceneCoordinator.transition(to: composeScene, using: .modal, animated: true).asObservable().map{ _ in }
         }
     }
+    
+    // MARK: - 메모 삭제
+    // 삭제버튼과 바인딩할 액션 추가
+    func makeDeleteAction() -> CocoaAction {
+        return Action { input in
+            self.storage.delete(memo: self.memo)
+            return self.sceneCoordinator.close(animated: true).asObservable().map {
+                _ in
+            }
+        }
+    }
+
     
 }
