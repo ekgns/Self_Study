@@ -53,6 +53,12 @@ class SceneCoordinator: SceneCoordinatorType {
                 subject.onError(TransitionError.navigationControllerMissing)
                 break
             }
+            
+            nav.rx.willShow
+                .subscribe(onNext: { [unowned self ] evt in
+                    self.currentVC = evt.viewController.sceneViewController
+                })
+                .disposed(by: bag)
              
             nav.pushViewController(target, animated: animated)
             currentVC = target.sceneViewController
@@ -69,7 +75,7 @@ class SceneCoordinator: SceneCoordinatorType {
         return subject.ignoreElements()
     }
     
-    @discardableResult
+    @discardableResult 
     func close(animated: Bool) -> Completable {
         return Completable.create { [unowned self] completable in
             if let presentingVC = self.currentVC.presentingViewController {

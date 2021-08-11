@@ -47,5 +47,14 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
                 }
             }
             .disposed(by: rx.disposeBag)
+        
+//        // 뒤로가기 버튼 아이템
+//        var backButton = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
+//        viewModel.title // 뷰모델에 저장되있는 타이틀과 버튼 타이틀을 바인딩 타이틀이 드라이버형태로 제공 되기때문에 생성자로 전달할 수 없어 바인딩
+//            .drive(backButton.rx.title)
+//            .disposed(by: rx.disposeBag)
+//        backButton.rx.action = viewModel.popAction
+//        navigationItem.hidesBackButton = true
+//        navigationItem.leftBarButtonItem = backButton // 기본으로 제공되는 백 버튼을 대체
     }
 }
