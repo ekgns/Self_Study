@@ -40,4 +40,32 @@ class MemoDetailViewModel: CommonViewModel {
     lazy var popAction = CocoaAction { [unowned self ] in
         return self.sceneCoordinator.close(animated: true).asObservable().map{ _ in }
     }
+    
+    // 새 메모 추가
+    func preformUpdate(memo: Memo) -> Action<String, Void> { //
+        return Action { input in // 액션을 보면 입력타입은 스트링/  입력 값으로 메모를 업데이트하도록 구현
+            // 크레이트 메모 메서드로 내용이 없는 메서드를 생성하고 실제로 저장하면 입력한 메모로 업데이트 하는 방식
+            // .map { _ in } // 업데이트가 리턴하는 업져버블은 편집된 메모를 방출한다 옵져버블이 방출하는 타입은 보이드 방출한는 요소의 형식이 달라 컴파일 오류가 나지만 맵연산자를 통해 쉽게 해결가능
+             self.storage.update(memo: memo, content: input)
+                .subscribe(onNext: { updated in
+                    self.contents.onNext([
+                        updated.content, self.formatter.string(from: updated.insertDate)
+                    ])
+                })
+                .disposed(by: self.rx.disposeBag)
+        return Observable.empty()
+        }
+    }
+    
+    // 메모 수정
+    func makeEditAction() -> CocoaAction {
+        return CocoaAction { _ in
+            let composeViewModel = MemoComposeViewModel(title: "메모편집", content: self.memo.content, sceneCoordinator: self.sceneCoordinator, storage: self.storage, saveAction: self.preformUpdate(memo: self.memo))
+            
+            let composeScene = Scene.compose(composeViewModel)
+            
+            return self.sceneCoordinator.transition(to: composeScene, using: .modal, animated: true).asObservable().map{ _ in }
+        }
+    }
+    
 }

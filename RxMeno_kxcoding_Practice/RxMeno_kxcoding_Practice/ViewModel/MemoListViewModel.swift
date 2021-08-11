@@ -18,13 +18,15 @@ class MemoListViewModel: CommonViewModel {
         return storage.memoList()
     }
     
-    // 새 메모 추가, 수정
+    // 새 메모 추가
     func preformUpdate(memo: Memo) -> Action<String, Void> { //
         return Action { input in // 액션을 보면 입력타입은 스트링/  입력 값으로 메모를 업데이트하도록 구현
             // 크레이트 메모 메서드로 내용이 없는 메서드를 생성하고 실제로 저장하면 입력한 메모로 업데이트 하는 방식
             return self.storage.update(memo: memo, content: input).map { _ in } // 업데이트가 리턴하는 업져버블은 편집된 메모를 방출한다 옵져버블이 방출하는 타입은 보이드 방출한는 요소의 형식이 달라 컴파일 오류가 나지만 맵연산자를 통해 쉽게 해결가능
         }
     }
+    
+ 
     
     // 취소
     func performCancel(memo: Memo) -> CocoaAction {
