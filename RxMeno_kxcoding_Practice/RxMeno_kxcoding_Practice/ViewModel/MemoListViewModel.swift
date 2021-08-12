@@ -22,7 +22,7 @@ class MemoListViewModel: CommonViewModel {
 //    var memoList: Observable<[Memo]> {
 //        return storage.memoList()
 //    }
-    // 테이블 뷰 바인딩에서 사용될 데이터 소스를 속성으로 선언
+    // MARK: - 테이블 뷰 바인딩에서 사용될 데이터 소스를 속성으로 선언
     let dataSource: RxTableViewSectionedAnimatedDataSource<MemoSectionModel> = { // 클로저를 활용해서 초기화
         let dataSource = RxTableViewSectionedAnimatedDataSource<MemoSectionModel>(configureCell: {(dataSource, tableView, indexPath, memo) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -40,7 +40,7 @@ class MemoListViewModel: CommonViewModel {
         return storage.memoList()
     }
     
-    // 새 메모 추가
+    // MARK: - 새 메모 추가
     func preformUpdate(memo: Memo) -> Action<String, Void> { //
         return Action { input in // 액션을 보면 입력타입은 스트링/  입력 값으로 메모를 업데이트하도록 구현
             // 크레이트 메모 메서드로 내용이 없는 메서드를 생성하고 실제로 저장하면 입력한 메모로 업데이트 하는 방식
@@ -50,7 +50,7 @@ class MemoListViewModel: CommonViewModel {
     
  
     
-    // 취소
+    // MARK: - 취소
     func performCancel(memo: Memo) -> CocoaAction {
         // 이곳에서는 생성된 메모를 삭제한다
         // 취소 메서드에서 메모를 삭제하는 이유
