@@ -65,27 +65,25 @@ class MemoListViewModel: CommonViewModel {
     func makeCreateAction() -> CocoaAction {
         return CocoaAction { _ in
             return self.storage.createMemo(content: "") // 크리에이트 메서드를 호출하면 새로운 메모가 생성되고 이 메모가 방출 되는 옵져버블이 리턴된다
-                .flatMap{ memo -> Observable<Void> in // 플랫맵으연산자를 호출하고 클로저로 화면 전환을 처리
-                    // 뷰 모델을 먼저 만들어야함 타이틀은 바로 문자열을 전달하면 되고 씬 코디네이터와 스토리지의 대한 의존성은 현재 뷰모델에 있는 속성으로 바로 주입할 수 있다
+                .flatMap{ memo -> Observable<Void> in   // 플랫맵으연산자를 호출하고 클로저로 화면 전환을 처리
+                                                        // 뷰 모델을 먼저 만들어야함 타이틀은 바로 문자열을 전달하면 되고 씬 코디네이터와 스토리지의 대한 의존성은 현재 뷰모델에 있는 속성으로 바로 주입할 수 있다
                     let composeViewModel = MemoComposeViewModel(title: "새 메모", sceneCoordinator: self.sceneCoordinator, storage: self.storage, saveAction: self.preformUpdate(memo: memo), cancelAction: self.performCancel(memo: memo))
                     
-                    // 컴포즈 씬을 생성하고 연관 값으로 뷰모델을 저장한다
+                                                        // 컴포즈 씬을 생성하고 연관 값으로 뷰모델을 저장한다
                     let composeScene = Scene.compose(composeViewModel)
-                    // 씬 코디네이터에서 트랜지션 메서드를 호출하고 씬을 모달 방식으로 표시
-                    // 트랜지션 메서드는 컴플리터블을 리턴한다 맵 연산자로 보이드형식을 방출하는 옵저버블로바꿔줘야한다
+                                                        // 씬 코디네이터에서 트랜지션 메서드를 호출하고 씬을 모달 방식으로 표시
+                                                        // 트랜지션 메서드는 컴플리터블을 리턴한다 맵 연산자로 보이드형식을 방출하는 옵저버블로바꿔줘야한다
                     return self.sceneCoordinator.transition(to: composeScene, using: .modal, animated: true).asObservable().map { _ in }
-                    
-                    
                 }
             }
         }
-    // 목록화면에서 보기 화면으로 전환 구현
-    // 다양한 코드를 보기 위해 속성형태로 구현
-    // 클로저 내부에서 셀프에 접근해야하기 때문에 lazy선언
+                                                        // 목록화면에서 보기 화면으로 전환 구현
+                                                        // 다양한 코드를 보기 위해 속성형태로 구현
+                                                        // 클로저 내부에서 셀프에 접근해야하기 때문에 lazy선언
     lazy var detailAction: Action<Memo, Void> = {
         return Action { memo in
-            // 뷰 모델 생성 후 씬을 생성한 다음 씬 코디네이터에서 트랜지션 메서드 호출
-            // 목록화면에서 쓰기 화면으로 이동하는 것과 동일한 과정
+                                                        // 뷰 모델 생성 후 씬을 생성한 다음 씬 코디네이터에서 트랜지션 메서드 호출
+                                                        // 목록화면에서 쓰기 화면으로 이동하는 것과 동일한 과정
             let detailViewModel = MemoDetailViewModel(memo: memo, title: "메모 보기", sceneCoordinator: self.sceneCoordinator, storage: self.storage)
             
             let detailScene = Scene.detail(detailViewModel)
@@ -94,7 +92,7 @@ class MemoListViewModel: CommonViewModel {
         }
     }()
     
-    // 테이블뷰 삭제
+    //MARK: - 테이블뷰 삭제
     lazy var deleteAction: Action<Memo, Swift.Never> = {
         return Action { memo in
             return self.storage.delete(memo: memo).ignoreElements()

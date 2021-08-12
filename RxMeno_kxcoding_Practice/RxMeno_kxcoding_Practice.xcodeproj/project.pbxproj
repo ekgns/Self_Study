@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38619FF94DCA4A8F8876A4E2 /* Pods_RxMeno_kxcoding_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9D07A8DEE42552B773DB9D /* Pods_RxMeno_kxcoding_Practice.framework */; };
+		AB66E79226C4BD6A004726E5 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66E79126C4BD6A004726E5 /* CoreDataStorage.swift */; };
 		AB7122B026C0EAC000B16F91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122AF26C0EAC000B16F91 /* AppDelegate.swift */; };
 		AB7122B226C0EAC000B16F91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7122B126C0EAC000B16F91 /* SceneDelegate.swift */; };
 		AB7122B726C0EAC000B16F91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7122B526C0EAC000B16F91 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		3F9D07A8DEE42552B773DB9D /* Pods_RxMeno_kxcoding_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMeno_kxcoding_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5395D807573E1A86E34C5212 /* Pods-RxMeno_kxcoding_Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMeno_kxcoding_Practice.debug.xcconfig"; path = "Target Support Files/Pods-RxMeno_kxcoding_Practice/Pods-RxMeno_kxcoding_Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		5DA9F8E2F8C8B8ACFDFFEB1D /* Pods-RxMeno_kxcoding_Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMeno_kxcoding_Practice.release.xcconfig"; path = "Target Support Files/Pods-RxMeno_kxcoding_Practice/Pods-RxMeno_kxcoding_Practice.release.xcconfig"; sourceTree = "<group>"; };
+		AB66E79126C4BD6A004726E5 /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		AB7122AC26C0EAC000B16F91 /* RxMeno_kxcoding_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMeno_kxcoding_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7122AF26C0EAC000B16F91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB7122B126C0EAC000B16F91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				AB7122B826C0EAC000B16F91 /* RxMeno_kxcoding_Practice.xcdatamodeld */,
+				AB66E79126C4BD6A004726E5 /* CoreDataStorage.swift */,
 			);
 			path = CoreDataStorage;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB7122D426C0F24800B16F91 /* MemoryStorage.swift in Sources */,
+				AB66E79226C4BD6A004726E5 /* CoreDataStorage.swift in Sources */,
 				AB7122E226C0FFDC00B16F91 /* MemoComposeViewModel.swift in Sources */,
 				AB7122EC26C1188800B16F91 /* SceneCoordinator.swift in Sources */,
 				AB7122E826C1023400B16F91 /* Scene.swift in Sources */,
