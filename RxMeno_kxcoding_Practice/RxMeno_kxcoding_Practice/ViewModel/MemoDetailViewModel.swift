@@ -12,7 +12,7 @@ import Action
 
 class MemoDetailViewModel: CommonViewModel {
     // 이전 씬에서 저장 된 메모가 전달됨
-    let memo: Memo
+    var memo: Memo
     
     // 날짜를 문자열로 바꿀때 사용 하는 포멧터
     private var formatter: DateFormatter = {
@@ -48,6 +48,7 @@ class MemoDetailViewModel: CommonViewModel {
             // .map { _ in } // 업데이트가 리턴하는 업져버블은 편집된 메모를 방출한다 옵져버블이 방출하는 타입은 보이드 방출한는 요소의 형식이 달라 컴파일 오류가 나지만 맵연산자를 통해 쉽게 해결가능
              self.storage.update(memo: memo, content: input)
                 .subscribe(onNext: { updated in
+                    self.memo = updated
                     self.contents.onNext([
                         updated.content, self.formatter.string(from: updated.insertDate)
                     ])
