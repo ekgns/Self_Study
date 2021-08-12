@@ -32,11 +32,12 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
         
         // 메모 목록을 테이블 뷰에 바인딩 하면 끝
         // 옵져버블과 테이블 뷰를 바인딩 하는 방식으로 구현한다
-        viewModel.memoList 
-            .bind(to: listTableView.rx.items(cellIdentifier: "cell")) {
-                row, memo, cell in
-                cell.textLabel?.text = memo.content
-            }
+        viewModel.memoList
+//            .bind(to: listTableView.rx.items(cellIdentifier: "cell")) {
+//                row, memo, cell in
+//                cell.textLabel?.text = memo.content
+//            }
+            .bind(to: listTableView.rx.items(dataSource: viewModel.dataSource))
             .disposed(by: rx.disposeBag)
         // 플러스 버튼과 액션을 바인딩한다
         addButton.rx.action = viewModel.makeCreateAction()
