@@ -60,20 +60,13 @@ class MemoComposeViewController: UIViewController, ViewModelBindableType {
         let keyboardObservable = Observable.merge(willShowObservable, willHideObservable).share()
         
         keyboardObservable
-            .subscribe(onNext: { [weak self] height in
-                guard let strongSelf = self else { return }
-                
-                var inset = strongSelf.contentTextView.contentInset
-                inset.bottom = height
-                
-                var scrollInset = strongSelf.contentTextView.contentInset
-                scrollInset.bottom = height
-                
-                UIView.animate(withDuration: 0.3) {
-                    strongSelf.contentTextView.contentInset = inset
-                    strongSelf.contentTextView.scrollIndicatorInsets = scrollInset
-                }
-            })
+            .tocontestInset(of: contentTextView)
+            .bind(to: contentTextView.rx.contenxtInset)
+            .disposed(by: rx.disposeBag)
+        
+        keyboardObservable
+            .toScrollInset(of: contentTextView)
+            .bind(to: contentTextView.rx.scrollInset)
             .disposed(by: rx.disposeBag)
     }
     
@@ -90,6 +83,39 @@ class MemoComposeViewController: UIViewController, ViewModelBindableType {
         
         if contentTextView.isFirstResponder {
             contentTextView.resignFirstResponder()
+        }
+    }
+}
+
+
+extension ObservableType where Element == CGFloat {
+    func tocontestInset(of textView: UITextView) -> Observable<UIEdgeInsets> {
+        return map { height in
+            var inset = textView.contentInset
+            inset.bottom = height
+            return inset
+        }
+    }
+    
+    func toScrollInset(of textView: UITextView) -> Observable<UIEdgeInsets> {
+        return map { height in
+            var scrollinset = textView.scrollIndicatorInsets
+            scrollinset.bottom = height
+            return scrollinset
+        }
+    }
+}
+
+
+extension Reactive where Base: UITextView {
+    var contenxtInset: Binder<UIEdgeInsets> {
+        return Binder(self.base) { textview, inset in
+            textview.contentInset = inset
+        }
+    }
+    var scrollInset: Binder<UIEdgeInsets> {
+        return Binder(self.base) { textview, scrollInset in
+            textview.scrollIndicatorInsets = scrollInset
         }
     }
 }
