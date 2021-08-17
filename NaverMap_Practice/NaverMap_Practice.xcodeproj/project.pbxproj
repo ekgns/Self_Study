@@ -80,15 +80,23 @@
 		AB4528E026CA429000E92706 /* NaverMap_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				AB67E8CF26CB424F0033D795 /* Home */,
 				AB4528E126CA429000E92706 /* AppDelegate.swift */,
 				AB4528E326CA429000E92706 /* SceneDelegate.swift */,
-				AB4528E526CA429000E92706 /* ViewController.swift */,
 				AB4528E726CA429000E92706 /* Main.storyboard */,
 				AB4528EA26CA429100E92706 /* Assets.xcassets */,
 				AB4528EC26CA429100E92706 /* LaunchScreen.storyboard */,
 				AB4528EF26CA429100E92706 /* Info.plist */,
 			);
 			path = NaverMap_Practice;
+			sourceTree = "<group>";
+		};
+		AB67E8CF26CB424F0033D795 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AB4528E526CA429000E92706 /* ViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

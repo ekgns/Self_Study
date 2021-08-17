@@ -64,6 +64,9 @@
                                     <constraint firstAttribute="width" secondItem="Jpc-x8-QcP" secondAttribute="height" multiplier="1:1" id="ezi-VK-bv6"/>
                                 </constraints>
                                 <state key="normal" image="myLocation"/>
+                                <connections>
+                                    <action selector="myLoactionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cmf-A0-QFQ"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7N-7Z-Nir">
                                 <rect key="frame" x="20" y="44" width="374" height="91"/>
@@ -149,10 +152,13 @@
                             <constraint firstItem="YrW-Jp-czg" firstAttribute="top" secondItem="Jpc-x8-QcP" secondAttribute="bottom" constant="10" id="owP-0n-0xk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="9DG-6u-hAo" id="Rel-cc-USA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
+            <point key="canvasLocation" x="122" y="114"/>
         </scene>
     </scenes>
     <resources>
