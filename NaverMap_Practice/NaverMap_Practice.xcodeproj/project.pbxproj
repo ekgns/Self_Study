@@ -14,6 +14,8 @@
 		AB4528E926CA429000E92706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4528E726CA429000E92706 /* Main.storyboard */; };
 		AB4528EB26CA429100E92706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4528EA26CA429100E92706 /* Assets.xcassets */; };
 		AB4528EE26CA429100E92706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4528EC26CA429100E92706 /* LaunchScreen.storyboard */; };
+		ABD46A1A26CB8C450018D361 /* ParkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD46A1926CB8C450018D361 /* ParkingService.swift */; };
+		ABED50FA26CCDDA9002383D3 /* CenterVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED50F926CCDDA9002383D3 /* CenterVO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AB4528EA26CA429100E92706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB4528ED26CA429100E92706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB4528EF26CA429100E92706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABD46A1926CB8C450018D361 /* ParkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingService.swift; sourceTree = "<group>"; };
+		ABED50F926CCDDA9002383D3 /* CenterVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +98,35 @@
 		AB67E8CF26CB424F0033D795 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				AB4528E526CA429000E92706 /* ViewController.swift */,
+				ABED50FB26CCE9B5002383D3 /* ViewModel */,
+				ABD46A1626CB77150018D361 /* Model */,
+				ABD46A1526CB77090018D361 /* ViewController */,
+				ABD46A1926CB8C450018D361 /* ParkingService.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		ABD46A1526CB77090018D361 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB4528E526CA429000E92706 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ABD46A1626CB77150018D361 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABED50F926CCDDA9002383D3 /* CenterVO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABED50FB26CCE9B5002383D3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +245,9 @@
 			files = (
 				AB4528E626CA429000E92706 /* ViewController.swift in Sources */,
 				AB4528E226CA429000E92706 /* AppDelegate.swift in Sources */,
+				ABED50FA26CCDDA9002383D3 /* CenterVO.swift in Sources */,
 				AB4528E426CA429000E92706 /* SceneDelegate.swift in Sources */,
+				ABD46A1A26CB8C450018D361 /* ParkingService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
